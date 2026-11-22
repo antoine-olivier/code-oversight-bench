@@ -1,0 +1,3859 @@
+{
+  "bench_id": "code-bench-2026-11-22-volet2",
+  "seed": 2026112202,
+  "n_pairs": 100,
+  "n_modules": 200,
+  "category_counts": {
+    "order_boundary": 18,
+    "equality_flip": 21,
+    "boolean_logic": 20,
+    "identity_membership": 21,
+    "arithmetic_sign": 20
+  },
+  "entries": [
+    {
+      "mod_id": "mod_001",
+      "pair_id": "V2P087",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "legacy_windows_render",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_windows_renderer.py",
+      "import_name": "rich._windows_renderer",
+      "nlines": 57,
+      "mutation_lineno": 26,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                    term.move_cursor_to(WindowsCoordinates(row=y - 1, col=x - 1))\n+                    term.move_cursor_to(WindowsCoordinates(row=y + 1, col=x - 1))",
+      "pytest_files": [
+        "tests/test_windows_renderer.py"
+      ],
+      "sha256": "2517ae5e86cd1818d16e49e6845e0e3f8d75f43e1483e2492855b7679052cbb5"
+    },
+    {
+      "mod_id": "mod_002",
+      "pair_id": "V2P061",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "get_all_subclasses",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/typeutils.py",
+      "import_name": "boltons.typeutils",
+      "nlines": 181,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_typeutils.py"
+      ],
+      "sha256": "41009f150ee60ca745c1d2b24a339d472159b4feb0b6ec8784f1997d0f93a290"
+    },
+    {
+      "mod_id": "mod_003",
+      "pair_id": "V2P007",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "is_complete_text",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/utils.py",
+      "import_name": "lark.utils",
+      "nlines": 417,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_parser.py"
+      ],
+      "sha256": "640fe215634a7dbb2fb4963c91d1612d832179b247e65b8c2fc583bbc6ae0c16"
+    },
+    {
+      "mod_id": "mod_004",
+      "pair_id": "V2P068",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "_cell_len",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/cells.py",
+      "import_name": "rich.cells",
+      "nlines": 353,
+      "mutation_lineno": 144,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    while index < character_count:\n+    while index <= character_count:",
+      "pytest_files": [
+        "tests/test_cells.py"
+      ],
+      "sha256": "d990409b64265d88bda7dd84930de83128b4213f2b7b6f58fc46351bf0150a11"
+    },
+    {
+      "mod_id": "mod_005",
+      "pair_id": "V2P002",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "add",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/queueutils.py",
+      "import_name": "boltons.queueutils",
+      "nlines": 224,
+      "mutation_lineno": 133,
+      "mutation": "in -> not in",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if task in self._entry_map:\n+        if task not in self._entry_map:",
+      "pytest_files": [
+        "tests/test_queueutils.py"
+      ],
+      "sha256": "0c7817c7d084e127196ed8e53ed463b9a8f273e6cdb10909155ec5cb95fc7631"
+    },
+    {
+      "mod_id": "mod_006",
+      "pair_id": "V2P100",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "get_all",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/gcutils.py",
+      "import_name": "boltons.gcutils",
+      "nlines": 190,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_gcutils.py"
+      ],
+      "sha256": "47284c2bab823cfc304e9fcf26749e7b0a86557fb84fcfa00e389067051cb5d5"
+    },
+    {
+      "mod_id": "mod_007",
+      "pair_id": "V2P005",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "_plain_int",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/_internal.py",
+      "import_name": "werkzeug._internal",
+      "nlines": 108,
+      "mutation_lineno": 104,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if _plain_int_re[base].fullmatch(value) is None:\n+    if _plain_int_re[base].fullmatch(value) is not None:",
+      "pytest_files": [
+        "tests/test_internal.py"
+      ],
+      "sha256": "a610ee20e1bd4abea234f52efbe8eb586ff65d343cfe7950268a79465275d270"
+    },
+    {
+      "mod_id": "mod_008",
+      "pair_id": "V2P072",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "generate_segments",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/align.py",
+      "import_name": "rich.align",
+      "nlines": 321,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_align.py",
+        "tests/test_columns_align.py"
+      ],
+      "sha256": "bda8ffe53f72f25bdcd192e0d9e1f2363cd3896e00c451a0a85c29fd1143d7f6"
+    },
+    {
+      "mod_id": "mod_009",
+      "pair_id": "V2P094",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "close",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/middleware/lint.py",
+      "import_name": "werkzeug.middleware.lint",
+      "nlines": 435,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/middleware/test_lint.py"
+      ],
+      "sha256": "3f190bc8a89ce34663ce11afdf0fa219d54f97b28f92f7ab6c364ea5d2129dee"
+    },
+    {
+      "mod_id": "mod_010",
+      "pair_id": "V2P042",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "resolve_color_default",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/globals.py",
+      "import_name": "click.globals",
+      "nlines": 68,
+      "mutation_lineno": 64,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if ctx is not None:\n+    if ctx is None:",
+      "pytest_files": [
+        "tests/test_imports.py"
+      ],
+      "sha256": "4684f3ac69ae30b1368637c1a684a3ef918b58c9eacd13d78adc88cc2c00012d"
+    },
+    {
+      "mod_id": "mod_011",
+      "pair_id": "V2P055",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "_is_false",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/visitor.py",
+      "import_name": "jmespath.visitor",
+      "nlines": 329,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_compliance.py",
+        "tests/test_parser.py"
+      ],
+      "sha256": "245a96fcd0890b8f37a5f7dd1d53b39f921a42db5aff6e25c460c77525cac9e5"
+    },
+    {
+      "mod_id": "mod_012",
+      "pair_id": "V2P025",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "wrap_trace",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/debugutils.py",
+      "import_name": "boltons.debugutils",
+      "nlines": 297,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_debugutils_trace.py"
+      ],
+      "sha256": "aefd467d99ef23e9e321fd81eb3938d65679cc341cac86ed552bb9420f0ec9ae"
+    },
+    {
+      "mod_id": "mod_013",
+      "pair_id": "V2P065",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "_guess_filename",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/file_storage.py",
+      "import_name": "werkzeug.datastructures.file_storage",
+      "nlines": 230,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_datastructures.py"
+      ],
+      "sha256": "12f81643311a1b4c9d92e71ad4d9f6f7d6809770a13e76526b01bef5e4390688"
+    },
+    {
+      "mod_id": "mod_014",
+      "pair_id": "V2P050",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "easter",
+      "repo": "dateutil",
+      "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+      "rel_in_src": "dateutil/easter.py",
+      "import_name": "dateutil.easter",
+      "nlines": 89,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_easter.py"
+      ],
+      "sha256": "5fc7342d5a2e5b8bc0522ea88ebc93a895e3022794b139cf030449d282832a11"
+    },
+    {
+      "mod_id": "mod_015",
+      "pair_id": "V2P031",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "_validate_arguments",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/functions.py",
+      "import_name": "jmespath.functions",
+      "nlines": 363,
+      "mutation_lineno": 88,
+      "mutation": "!= -> ==",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        elif len(args) != len(signature):\n+        elif len(args) == len(signature):",
+      "pytest_files": [
+        "tests/test_custom_functions.py",
+        "tests/test_functions.py"
+      ],
+      "sha256": "c36af3c6a513fce20566705d70121cc1b318eec77991f04586e73022acae760f"
+    },
+    {
+      "mod_id": "mod_016",
+      "pair_id": "V2P074",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "to_url",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/routing/converters.py",
+      "import_name": "werkzeug.routing.converters",
+      "nlines": 331,
+      "mutation_lineno": 206,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if len(value_str) > width:\n+            if len(value_str) >= width:",
+      "pytest_files": [
+        "tests/test_routing.py"
+      ],
+      "sha256": "6e1fd348a78a4674550e30d9473a50966ba13f4f4e9dc4509b6b9191c2a3bf2e"
+    },
+    {
+      "mod_id": "mod_017",
+      "pair_id": "V2P053",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "from_header",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/etag.py",
+      "import_name": "werkzeug.datastructures.etag",
+      "nlines": 439,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_apply_conditions.py",
+        "tests/test_apply_range.py"
+      ],
+      "sha256": "b7042d093e04cd19cd68a7dfbc50534cefea5a36ac38a4e93a1b460552d82e4a"
+    },
+    {
+      "mod_id": "mod_018",
+      "pair_id": "V2P097",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "get_format_args",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/formatutils.py",
+      "import_name": "boltons.formatutils",
+      "nlines": 357,
+      "mutation_lineno": 180,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if len(fname_list) > 1:\n+            if len(fname_list) >= 1:",
+      "pytest_files": [
+        "tests/test_formatutils.py"
+      ],
+      "sha256": "8e9816f5480df8c9dcd8dc67e2ef97fe1324b4c2cc9a1c6155109091af6173ec"
+    },
+    {
+      "mod_id": "mod_019",
+      "pair_id": "V2P048",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "handle_NL",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/indenter.py",
+      "import_name": "lark.indenter",
+      "nlines": 142,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_parser.py",
+        "tests/test_python_grammar.py"
+      ],
+      "sha256": "0ddab824868546fd4f76ba5db73e996527089eaff4b7f7475b4da314625eb056"
+    },
+    {
+      "mod_id": "mod_020",
+      "pair_id": "V2P048",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "handle_NL",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/indenter.py",
+      "import_name": "lark.indenter",
+      "nlines": 142,
+      "mutation_lineno": 42,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if indent > self.indent_level[-1]:\n+        if indent >= self.indent_level[-1]:",
+      "pytest_files": [
+        "tests/test_parser.py",
+        "tests/test_python_grammar.py"
+      ],
+      "sha256": "16f04b094da2a07ed293a3775f6e1c0b4325f3fa64abfe28be7cef167dad51d4"
+    },
+    {
+      "mod_id": "mod_021",
+      "pair_id": "V2P006",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "_get_real_value",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/middleware/proxy_fix.py",
+      "import_name": "werkzeug.middleware.proxy_fix",
+      "nlines": 178,
+      "mutation_lineno": 124,
+      "mutation": ">= -> >",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if len(values) >= trusted:\n+        if len(values) > trusted:",
+      "pytest_files": [
+        "tests/middleware/test_proxy_fix.py"
+      ],
+      "sha256": "5045e8e77b672bbd79f9bda0bc95ddc6fcadeb24ffd3464d7346a17669cdf3b7"
+    },
+    {
+      "mod_id": "mod_022",
+      "pair_id": "V2P085",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "strip_docstrings",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/tools/standalone.py",
+      "import_name": "lark.tools.standalone",
+      "nlines": 197,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_tools.py"
+      ],
+      "sha256": "b12d7ccf305e169ee2ecd69675d2dde3d043169996767eab3a6840f605630758"
+    },
+    {
+      "mod_id": "mod_023",
+      "pair_id": "V2P041",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "_rule_line",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/rule.py",
+      "import_name": "rich.rule",
+      "nlines": 129,
+      "mutation_lineno": 104,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        rule_text = Text(self.characters * ((width // chars_len) + 1), self.style)\n+        rule_text = Text(self.characters * ((width // chars_len) - 1), self.style)",
+      "pytest_files": [
+        "tests/test_rule.py",
+        "tests/test_rule_in_table.py"
+      ],
+      "sha256": "f98260d4073e4d993cd43616e9d646eed986fc1808cbcc4a524b02472e74dabe"
+    },
+    {
+      "mod_id": "mod_024",
+      "pair_id": "V2P074",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "to_url",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/routing/converters.py",
+      "import_name": "werkzeug.routing.converters",
+      "nlines": 331,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_routing.py"
+      ],
+      "sha256": "83a98ca7dbae20973582b4b71f524599045638c79a2bc62c4e458ba5346dc6d5"
+    },
+    {
+      "mod_id": "mod_025",
+      "pair_id": "V2P029",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "store_error",
+      "repo": "marshmallow",
+      "commit": "f268f0c4d12c4edb43743ca5703eed7954320245",
+      "rel_in_src": "marshmallow/error_store.py",
+      "import_name": "marshmallow.error_store",
+      "nlines": 72,
+      "mutation_lineno": 22,
+      "mutation": "!= -> ==",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if field_name != SCHEMA or not isinstance(messages, dict):\n+        if field_name == SCHEMA or not isinstance(messages, dict):",
+      "pytest_files": [
+        "tests/test_error_store.py"
+      ],
+      "sha256": "4f58358b089fadf905f833848d3374c8a3e6fed8879eedcc4cf6aace71371cee"
+    },
+    {
+      "mod_id": "mod_026",
+      "pair_id": "V2P092",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "_get_message",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/excutils.py",
+      "import_name": "boltons.excutils",
+      "nlines": 288,
+      "mutation_lineno": 120,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if args and args[0]:\n+        if args or args[0]:",
+      "pytest_files": [
+        "tests/test_excutils.py"
+      ],
+      "sha256": "f1613b4d08e13e097630696482b5f9909464001658d61c713c17f8af250a1fd7"
+    },
+    {
+      "mod_id": "mod_027",
+      "pair_id": "V2P033",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "_match_or_else",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/lexer.py",
+      "import_name": "jmespath.lexer",
+      "nlines": 209,
+      "mutation_lineno": 205,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            return {'type': match_type, 'value': current + next_char,\n+            return {'type': match_type, 'value': current - next_char,",
+      "pytest_files": [
+        "tests/test_lexer.py"
+      ],
+      "sha256": "16abbf074278270a4bf04412e46c18520f9c37d711a6a26a8beebbcf1f3651d6"
+    },
+    {
+      "mod_id": "mod_028",
+      "pair_id": "V2P028",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "from_pyfile",
+      "repo": "flask",
+      "commit": "49943b5a94413a530761350f04e896f76e8d620e",
+      "rel_in_src": "flask/config.py",
+      "import_name": "flask.config",
+      "nlines": 368,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_config.py",
+        "tests/test_instance_config.py"
+      ],
+      "sha256": "1e96b8823b559bb504f168c07c86334cdde5370525b2aebd99f67336cdc4c205"
+    },
+    {
+      "mod_id": "mod_029",
+      "pair_id": "V2P013",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "normalized",
+      "repo": "dateutil",
+      "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+      "rel_in_src": "dateutil/relativedelta.py",
+      "import_name": "dateutil.relativedelta",
+      "nlines": 596,
+      "mutation_lineno": 307,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        microseconds = round(self.microseconds + 1e6 * (seconds_f - seconds))\n+        microseconds = round(self.microseconds - 1e6 * (seconds_f - seconds))",
+      "pytest_files": [
+        "tests/test_relativedelta.py"
+      ],
+      "sha256": "1deef3510d6459e1d91067bceff56c7bd4274f651cf0774d47a9218b7fe38843"
+    },
+    {
+      "mod_id": "mod_030",
+      "pair_id": "V2P020",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "_normalize_group_names",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/dependency_groups.py",
+      "import_name": "packaging.dependency_groups",
+      "nlines": 340,
+      "mutation_lineno": 331,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if len(names) > 1:\n+        if len(names) >= 1:",
+      "pytest_files": [
+        "tests/test_dependency_groups.py"
+      ],
+      "sha256": "fcca52e6cbd0201584aa1361b05b2c834ec692e87ab7e617eaa880c6ea1b1792"
+    },
+    {
+      "mod_id": "mod_031",
+      "pair_id": "V2P089",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "expand_kids_by_data",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/tree.py",
+      "import_name": "lark.tree",
+      "nlines": 282,
+      "mutation_lineno": 191,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        for i in range(len(self.children)-1, -1, -1):\n+        for i in range(len(self.children)+1, -1, -1):",
+      "pytest_files": [
+        "tests/test_tree_forest_transformer.py",
+        "tests/test_tree_templates.py",
+        "tests/test_trees.py"
+      ],
+      "sha256": "f5436a32481176ddfda69d46353b82875911df46afe7e8d2d0477af6c0489795"
+    },
+    {
+      "mod_id": "mod_032",
+      "pair_id": "V2P027",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "best_match",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/accept.py",
+      "import_name": "werkzeug.datastructures.accept",
+      "nlines": 425,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_apply_range.py",
+        "tests/test_datastructures.py"
+      ],
+      "sha256": "463fbd07b6f47e5b00e523535537e75c693f98a87131a6ddaaa5938f160cc2b4"
+    },
+    {
+      "mod_id": "mod_033",
+      "pair_id": "V2P058",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "get_context",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/exceptions.py",
+      "import_name": "lark.exceptions",
+      "nlines": 293,
+      "mutation_lineno": 73,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            return (before + after + b'\\n' + b' ' * len(before.expandtabs()) + b'^\\n').decode(\"ascii\", \"backslashreplace\")\n+            return (before - after + b'\\n' + b' ' * len(before.expandtabs()) + b'^\\n').decode(\"ascii\", \"backslashreplace\")",
+      "pytest_files": [
+        "tests/test_cache.py",
+        "tests/test_parser.py"
+      ],
+      "sha256": "55b1edece06bb3fa9f760580fb685775766bb56f4c6ee4c5406c544f14688ffa"
+    },
+    {
+      "mod_id": "mod_034",
+      "pair_id": "V2P007",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "is_complete_text",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/utils.py",
+      "import_name": "lark.utils",
+      "nlines": 417,
+      "mutation_lineno": 216,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        return self.start == 0 and self.end == len(self.text)\n+        return self.start != 0 and self.end == len(self.text)",
+      "pytest_files": [
+        "tests/test_parser.py"
+      ],
+      "sha256": "84eda40f677c82a630570a944c396edec706835ebd739a3a7d9aa6ce014937d3"
+    },
+    {
+      "mod_id": "mod_035",
+      "pair_id": "V2P059",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "render",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/spinner.py",
+      "import_name": "rich.spinner",
+      "nlines": 133,
+      "mutation_lineno": 70,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if self.start_time is None:\n+        if self.start_time is not None:",
+      "pytest_files": [
+        "tests/test_spinner.py"
+      ],
+      "sha256": "5786c24de4d6a9c3b7d26bafcdbbf6476f2d549b1e8a3a66296435cd9116d187"
+    },
+    {
+      "mod_id": "mod_036",
+      "pair_id": "V2P065",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "_guess_filename",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/file_storage.py",
+      "import_name": "werkzeug.datastructures.file_storage",
+      "nlines": 230,
+      "mutation_lineno": 222,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if filename is not None:\n+    if filename is None:",
+      "pytest_files": [
+        "tests/test_datastructures.py"
+      ],
+      "sha256": "caeabb0276c2e0cb1ff48a5eaed9b2f1bfbbde86b5ccb80363949d26e99c0426"
+    },
+    {
+      "mod_id": "mod_037",
+      "pair_id": "V2P055",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "_is_false",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/visitor.py",
+      "import_name": "jmespath.visitor",
+      "nlines": 329,
+      "mutation_lineno": 300,
+      "mutation": "or -> and",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        return (value == '' or value == [] or value == {} or value is None or\n+        return (value == '' and value == [] or value == {} or value is None or",
+      "pytest_files": [
+        "tests/test_compliance.py",
+        "tests/test_parser.py"
+      ],
+      "sha256": "4b7c04a9857df5b5f8c16b6e043ce2cf9e44dabd10686e65bd829944f9cadf13"
+    },
+    {
+      "mod_id": "mod_038",
+      "pair_id": "V2P023",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "collect",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/errors.py",
+      "import_name": "packaging.errors",
+      "nlines": 97,
+      "mutation_lineno": 83,
+      "mutation": "or -> and",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        error_classes = err_cls or (Exception,)\n+        error_classes = err_cls and (Exception,)",
+      "pytest_files": [
+        "tests/test_errors.py"
+      ],
+      "sha256": "01c5e5b46185ba9e770ae58aecdd5ba4e638d77fcc639b9912506336226d5341"
+    },
+    {
+      "mod_id": "mod_039",
+      "pair_id": "V2P025",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "wrap_trace",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/debugutils.py",
+      "import_name": "boltons.debugutils",
+      "nlines": 297,
+      "mutation_lineno": 264,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if attr_name == '__getattribute__':\n+        if attr_name != '__getattribute__':",
+      "pytest_files": [
+        "tests/test_debugutils_trace.py"
+      ],
+      "sha256": "1306ca351b6c2519d420256f900914471446162b8e577b1dbe4c36565af1a0ca"
+    },
+    {
+      "mod_id": "mod_040",
+      "pair_id": "V2P086",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "get",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/layout.py",
+      "import_name": "rich.layout",
+      "nlines": 433,
+      "mutation_lineno": 197,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if self.name == name:\n+        if self.name != name:",
+      "pytest_files": [
+        "tests/test_layout.py"
+      ],
+      "sha256": "a8a00e4c13876d24a3f301540b2cc61d61c7a5962cfd7dced1f75cd4fcba8bf1"
+    },
+    {
+      "mod_id": "mod_041",
+      "pair_id": "V2P091",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "namedlist",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/namedutils.py",
+      "import_name": "boltons.namedutils",
+      "nlines": 394,
+      "mutation_lineno": 327,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if not name or not all(c.isalnum() or c == '_' for c in name):\n+        if not name or not all(c.isalnum() or c != '_' for c in name):",
+      "pytest_files": [
+        "tests/test_namedutils.py"
+      ],
+      "sha256": "512ecc8c1594b7c37657936842d31e4caf5f9b91fb6edab0f642af1e7ef8e083"
+    },
+    {
+      "mod_id": "mod_042",
+      "pair_id": "V2P015",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "_to_str",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/filesize.py",
+      "import_name": "rich.filesize",
+      "nlines": 89,
+      "mutation_lineno": 28,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    elif size < base:\n+    elif size <= base:",
+      "pytest_files": [
+        "tests/test_filesize.py"
+      ],
+      "sha256": "c4897bd9c3638dcd6bde5e8aae374df2d14be94ec82b752a7c77ce85a459695f"
+    },
+    {
+      "mod_id": "mod_043",
+      "pair_id": "V2P019",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "compose_scalar_node",
+      "repo": "pyyaml",
+      "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+      "rel_in_src": "yaml/composer.py",
+      "import_name": "yaml.composer",
+      "nlines": 140,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/legacy_tests/test_structure.py"
+      ],
+      "sha256": "b3286fc147f4e14e6ee24a90f4b54d8dd7fcb30e206998c5ea85e4247f5d4429"
+    },
+    {
+      "mod_id": "mod_044",
+      "pair_id": "V2P003",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "index",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/listutils.py",
+      "import_name": "boltons.listutils",
+      "nlines": 431,
+      "mutation_lineno": 408,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                    return offset + rel_idx\n+                    return offset - rel_idx",
+      "pytest_files": [
+        "tests/test_listutils.py"
+      ],
+      "sha256": "9b20cb4d743f3b31f9fdc7279e41b5a2f166d5c380f50466797421546fddfe0b"
+    },
+    {
+      "mod_id": "mod_045",
+      "pair_id": "V2P017",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "_ensure_tuple",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/_version_info.py",
+      "import_name": "attr._version_info",
+      "nlines": 90,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_version_info.py"
+      ],
+      "sha256": "35e463420a5730c467a446cc0f8402f0492ac4557184c17ea10ad351eeb58152"
+    },
+    {
+      "mod_id": "mod_046",
+      "pair_id": "V2P045",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "_parse",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/markup.py",
+      "import_name": "rich.markup",
+      "nlines": 254,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_markup.py"
+      ],
+      "sha256": "978e6b7799d68c33c19e92553174264e49249f224490ca05a8483c9dd08dcb80"
+    },
+    {
+      "mod_id": "mod_047",
+      "pair_id": "V2P011",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "justify",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/containers.py",
+      "import_name": "rich.containers",
+      "nlines": 155,
+      "mutation_lineno": 149,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                    if index < len(spaces):\n+                    if index <= len(spaces):",
+      "pytest_files": [
+        "tests/test_containers.py"
+      ],
+      "sha256": "7775510fab3158b71115d7e1aa5d0ff84261e53705f9c558bee7d5f71cfc8bd4"
+    },
+    {
+      "mod_id": "mod_048",
+      "pair_id": "V2P034",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "from_header",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/range.py",
+      "import_name": "werkzeug.datastructures.range",
+      "nlines": 492,
+      "mutation_lineno": 251,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                        end = _plain_int(end_str) + 1\n+                        end = _plain_int(end_str) - 1",
+      "pytest_files": [
+        "tests/test_apply_range.py"
+      ],
+      "sha256": "bdcd4ab09308eea4eba82a56722ba3a3679ca952b88d05392a2be830fa1d08ef"
+    },
+    {
+      "mod_id": "mod_049",
+      "pair_id": "V2P036",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "test_var",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/tree_templates.py",
+      "import_name": "lark.tree_templates",
+      "nlines": 181,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_tree_templates.py"
+      ],
+      "sha256": "67e6b403c429278f58ee6865b24b0af74230bc439a3f1f88907411f4650ab7f5"
+    },
+    {
+      "mod_id": "mod_050",
+      "pair_id": "V2P081",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "stop",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/live.py",
+      "import_name": "rich.live",
+      "nlines": 404,
+      "mutation_lineno": 180,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                    if self.ipy_widget is not None and self.transient:\n+                    if self.ipy_widget is not None or self.transient:",
+      "pytest_files": [
+        "tests/test_live.py",
+        "tests/test_live_render.py"
+      ],
+      "sha256": "18054ea8db896bc4fd29c701e0a310e91284df837bcfaffdfdf0c42e05e9b0fb"
+    },
+    {
+      "mod_id": "mod_051",
+      "pair_id": "V2P021",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "divide_line",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_wrap.py",
+      "import_name": "rich._wrap",
+      "nlines": 94,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_console.py",
+        "tests/test_progress.py"
+      ],
+      "sha256": "1b46ac69210b799f7b679463d5788f09819b9efb677a3812d2f508e58654e804"
+    },
+    {
+      "mod_id": "mod_052",
+      "pair_id": "V2P010",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "blend_rgb",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/color.py",
+      "import_name": "rich.color",
+      "nlines": 622,
+      "mutation_lineno": 589,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        int(b1 + (b2 - b1) * cross_fade),\n+        int(b1 - (b2 - b1) * cross_fade),",
+      "pytest_files": [
+        "tests/test_color.py",
+        "tests/test_color_triplet.py"
+      ],
+      "sha256": "f7336a7235812594e303aa65e977f829e680a01899860bd52f7b4d5f07798bf4"
+    },
+    {
+      "mod_id": "mod_053",
+      "pair_id": "V2P079",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "render",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/logging.py",
+      "import_name": "rich.logging",
+      "nlines": 306,
+      "mutation_lineno": 234,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        time_format = None if self.formatter is None else self.formatter.datefmt\n+        time_format = None if self.formatter is not None else self.formatter.datefmt",
+      "pytest_files": [
+        "tests/test_logging.py"
+      ],
+      "sha256": "f9625f7938c90f97f9a1cad4df559ae333ffa0d1043b46ac1856d371fe34c18e"
+    },
+    {
+      "mod_id": "mod_054",
+      "pair_id": "V2P078",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "parse_node",
+      "repo": "pyyaml",
+      "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+      "rel_in_src": "yaml/parser.py",
+      "import_name": "yaml.parser",
+      "nlines": 590,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/legacy_tests/test_canonical.py",
+        "tests/legacy_tests/test_structure.py"
+      ],
+      "sha256": "6bfa8531c1aef9d3b7ec9b5d40d5c75a36d3e1c38f11afd95ff46eb47cca4060"
+    },
+    {
+      "mod_id": "mod_055",
+      "pair_id": "V2P077",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "exclude_",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/filters.py",
+      "import_name": "attr.filters",
+      "nlines": 73,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_filters.py"
+      ],
+      "sha256": "7e76d3c7c84e0555ffcc4b037383b7fe91fb82d525ec3470fc4209ec65f61c1b"
+    },
+    {
+      "mod_id": "mod_056",
+      "pair_id": "V2P070",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "parse",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/formparser.py",
+      "import_name": "werkzeug.formparser",
+      "nlines": 534,
+      "mutation_lineno": 262,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if mimetype == \"multipart/form-data\":\n+        if mimetype != \"multipart/form-data\":",
+      "pytest_files": [
+        "tests/test_formparser.py"
+      ],
+      "sha256": "be7627d05cc8a70c43294094e7998b7498462e2255ed1aad536cc461d36fccbf"
+    },
+    {
+      "mod_id": "mod_057",
+      "pair_id": "V2P071",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "align_text",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/panel.py",
+      "import_name": "rich.panel",
+      "nlines": 318,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_panel.py"
+      ],
+      "sha256": "b069d07c6cb9f2eda43e4bc82403dfc22177c1adedc293b8312d63d955d36c67"
+    },
+    {
+      "mod_id": "mod_058",
+      "pair_id": "V2P090",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "ratio_reduce",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_ratio.py",
+      "import_name": "rich._ratio",
+      "nlines": 154,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_ratio.py"
+      ],
+      "sha256": "95cefa19829a6dfdcdf536c308ec1285d10d537c68b9ece7c2ac80fb29713848"
+    },
+    {
+      "mod_id": "mod_059",
+      "pair_id": "V2P090",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "ratio_reduce",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_ratio.py",
+      "import_name": "rich._ratio",
+      "nlines": 154,
+      "mutation_lineno": 99,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            append(value - distributed)\n+            append(value + distributed)",
+      "pytest_files": [
+        "tests/test_ratio.py"
+      ],
+      "sha256": "e9e00197265591f88406869e1f2811fe2c9b7f7591331ce54343f9e666df20b3"
+    },
+    {
+      "mod_id": "mod_060",
+      "pair_id": "V2P013",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "normalized",
+      "repo": "dateutil",
+      "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+      "rel_in_src": "dateutil/relativedelta.py",
+      "import_name": "dateutil.relativedelta",
+      "nlines": 596,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_relativedelta.py"
+      ],
+      "sha256": "9d9d626424e6c8b3d90367b690eeb706f26682d55da7456c14bf0b424982320a"
+    },
+    {
+      "mod_id": "mod_061",
+      "pair_id": "V2P073",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "_escape_shell_args",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/ecoutils.py",
+      "import_name": "boltons.ecoutils",
+      "nlines": 480,
+      "mutation_lineno": 390,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    elif style == 'cmd':\n+    elif style != 'cmd':",
+      "pytest_files": [
+        "tests/test_ecoutils.py"
+      ],
+      "sha256": "91479b4c8e6be7ca7cb2cc747c5b1002e8d8f2f1e2d2f70a136acc6c06e97f13"
+    },
+    {
+      "mod_id": "mod_062",
+      "pair_id": "V2P086",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "get",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/layout.py",
+      "import_name": "rich.layout",
+      "nlines": 433,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_layout.py"
+      ],
+      "sha256": "679460f13cc4ac357f1f5a16724596ddf058570c34347afaa170728d0e0568eb"
+    },
+    {
+      "mod_id": "mod_063",
+      "pair_id": "V2P061",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "get_all_subclasses",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/typeutils.py",
+      "import_name": "boltons.typeutils",
+      "nlines": 181,
+      "mutation_lineno": 162,
+      "mutation": "in -> not in",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if cur in seen:\n+        if cur not in seen:",
+      "pytest_files": [
+        "tests/test_typeutils.py"
+      ],
+      "sha256": "163c481812069ae0ac9c8695e0a853f0918777454b7415eb2e366206ae6c39e4"
+    },
+    {
+      "mod_id": "mod_064",
+      "pair_id": "V2P037",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "cmd_bump",
+      "repo": "semver",
+      "commit": "a4b7d337b1eb699ad4bad532a4b3fc68f8ec2408",
+      "rel_in_src": "semver/cli.py",
+      "import_name": "semver.cli",
+      "nlines": 175,
+      "mutation_lineno": 38,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if args.bump is None:\n+    if args.bump is not None:",
+      "pytest_files": [
+        "tests/test_pysemver-cli.py"
+      ],
+      "sha256": "ae5deec193faf5aef19a4e4fcd173f27cf5018ffe792157f4a283d9960226818"
+    },
+    {
+      "mod_id": "mod_065",
+      "pair_id": "V2P028",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "from_pyfile",
+      "repo": "flask",
+      "commit": "49943b5a94413a530761350f04e896f76e8d620e",
+      "rel_in_src": "flask/config.py",
+      "import_name": "flask.config",
+      "nlines": 368,
+      "mutation_lineno": 211,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if silent and e.errno in (errno.ENOENT, errno.EISDIR, errno.ENOTDIR):\n+            if silent or e.errno in (errno.ENOENT, errno.EISDIR, errno.ENOTDIR):",
+      "pytest_files": [
+        "tests/test_config.py",
+        "tests/test_instance_config.py"
+      ],
+      "sha256": "031e2ab1908468f8936b82eb5ce5c6019abea84fb7bc8d1216e651b0ea711960"
+    },
+    {
+      "mod_id": "mod_066",
+      "pair_id": "V2P082",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "cmp_using",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/_cmp.py",
+      "import_name": "attr._cmp",
+      "nlines": 161,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_cmp.py"
+      ],
+      "sha256": "15ce835951723bed5da345543bba1514da4b791bca59f9f1ba87557008066ae4"
+    },
+    {
+      "mod_id": "mod_067",
+      "pair_id": "V2P004",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "represent_object",
+      "repo": "pyyaml",
+      "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+      "rel_in_src": "yaml/representer.py",
+      "import_name": "yaml.representer",
+      "nlines": 390,
+      "mutation_lineno": 340,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if not args and not listitems and not dictitems \\\n+        if not args or not listitems and not dictitems \\",
+      "pytest_files": [
+        "tests/legacy_tests/test_representer.py"
+      ],
+      "sha256": "f666eb415d5e072ac4217a1891c12e249a323c3ef709cd5a809e2bd959141279"
+    },
+    {
+      "mod_id": "mod_068",
+      "pair_id": "V2P093",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "parse_wheel_filename",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/utils.py",
+      "import_name": "packaging.utils",
+      "nlines": 373,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_utils.py"
+      ],
+      "sha256": "a8bcf8c12e00d2f3fd5b9fea9c3b518dc918be42ac4d97623f3c60e089b04742"
+    },
+    {
+      "mod_id": "mod_069",
+      "pair_id": "V2P082",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "cmp_using",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/_cmp.py",
+      "import_name": "attr._cmp",
+      "nlines": 161,
+      "mutation_lineno": 84,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if gt is not None:\n+    if gt is None:",
+      "pytest_files": [
+        "tests/test_cmp.py"
+      ],
+      "sha256": "e049abb3d5d76744c6286862d2bc75872bdd4ee8acef2431a3f831fbadcea944"
+    },
+    {
+      "mod_id": "mod_070",
+      "pair_id": "V2P084",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "_join_param_hints",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/exceptions.py",
+      "import_name": "click.exceptions",
+      "nlines": 379,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_arguments.py",
+        "tests/test_commands.py"
+      ],
+      "sha256": "21bc1b1f64525fd6512fbadf80679b15a6ce14e5134795cb6d000631a39f9387"
+    },
+    {
+      "mod_id": "mod_071",
+      "pair_id": "V2P079",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "render",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/logging.py",
+      "import_name": "rich.logging",
+      "nlines": 306,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_logging.py"
+      ],
+      "sha256": "f68a4103a8e5af3916c345682cfb6ae9b2922f5fc1d26559e532ba9cd58e818c"
+    },
+    {
+      "mod_id": "mod_072",
+      "pair_id": "V2P099",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "untag",
+      "repo": "flask",
+      "commit": "49943b5a94413a530761350f04e896f76e8d620e",
+      "rel_in_src": "flask/json/tag.py",
+      "import_name": "flask.json.tag",
+      "nlines": 328,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_json_tag.py"
+      ],
+      "sha256": "c4ba987d1dcb4768bd2e1bc81c3a4ce5798f76e38ca31949e59d919c8a305993"
+    },
+    {
+      "mod_id": "mod_073",
+      "pair_id": "V2P031",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "_validate_arguments",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/functions.py",
+      "import_name": "jmespath.functions",
+      "nlines": 363,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_custom_functions.py",
+        "tests/test_functions.py"
+      ],
+      "sha256": "6cd0b03bd96afad1fecc932e516d2c5b21f7c0dd8e8f5d32d0ffc2d9f0e1f56a"
+    },
+    {
+      "mod_id": "mod_074",
+      "pair_id": "V2P029",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "store_error",
+      "repo": "marshmallow",
+      "commit": "f268f0c4d12c4edb43743ca5703eed7954320245",
+      "rel_in_src": "marshmallow/error_store.py",
+      "import_name": "marshmallow.error_store",
+      "nlines": 72,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_error_store.py"
+      ],
+      "sha256": "27803f02eebe7e6d525816015b4a1cfb387519c90e6cdae7c9ad11b04956512f"
+    },
+    {
+      "mod_id": "mod_075",
+      "pair_id": "V2P020",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "_normalize_group_names",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/dependency_groups.py",
+      "import_name": "packaging.dependency_groups",
+      "nlines": 340,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_dependency_groups.py"
+      ],
+      "sha256": "96a7c87d49743d8dd4edf2c2b0028768891df3b54435daf89c5b66c083714bcc"
+    },
+    {
+      "mod_id": "mod_076",
+      "pair_id": "V2P092",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "_get_message",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/excutils.py",
+      "import_name": "boltons.excutils",
+      "nlines": 288,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_excutils.py"
+      ],
+      "sha256": "200998736fcda91e796da0befa9ff858527ebe71d428a609c1266fa2a8070a18"
+    },
+    {
+      "mod_id": "mod_077",
+      "pair_id": "V2P022",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "clamp",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/measure.py",
+      "import_name": "rich.measure",
+      "nlines": 152,
+      "mutation_lineno": 74,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if max_width is not None:\n+        if max_width is None:",
+      "pytest_files": [
+        "tests/test_measure.py"
+      ],
+      "sha256": "e9e10e37063ba37827dd021bd3f553d610c306131f6f93a0e5a1eb5580102f0c"
+    },
+    {
+      "mod_id": "mod_078",
+      "pair_id": "V2P075",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "_ansi_tokenize",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/ansi.py",
+      "import_name": "rich.ansi",
+      "nlines": 242,
+      "mutation_lineno": 48,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                position = end + 1\n+                position = end - 1",
+      "pytest_files": [
+        "tests/test_ansi.py"
+      ],
+      "sha256": "c1931ffede4d432d4cdaf9b74e257a114cc0760581ddb75e0fd22d8d1004d699"
+    },
+    {
+      "mod_id": "mod_079",
+      "pair_id": "V2P098",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "from_data",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/tableutils.py",
+      "import_name": "boltons.tableutils",
+      "nlines": 591,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_tableutils.py"
+      ],
+      "sha256": "9f92822dda54fa775e6ebd5db46252151eff6fe1c5954a6e1f7dcddd87316a26"
+    },
+    {
+      "mod_id": "mod_080",
+      "pair_id": "V2P088",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "_loads_unsafe_impl",
+      "repo": "itsdangerous",
+      "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "rel_in_src": "itsdangerous/serializer.py",
+      "import_name": "itsdangerous.serializer",
+      "nlines": 405,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_itsdangerous/test_serializer.py"
+      ],
+      "sha256": "63c30599269bdc92c690bdd631b8ae6cc648dbb63998c766c3542292872047be"
+    },
+    {
+      "mod_id": "mod_081",
+      "pair_id": "V2P089",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "expand_kids_by_data",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/tree.py",
+      "import_name": "lark.tree",
+      "nlines": 282,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_tree_forest_transformer.py",
+        "tests/test_tree_templates.py",
+        "tests/test_trees.py"
+      ],
+      "sha256": "88c8525cd4d90502521b051914cdf4cdd7fab761ef85eba097b5dc908410822f"
+    },
+    {
+      "mod_id": "mod_082",
+      "pair_id": "V2P095",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "iter_renderables",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/columns.py",
+      "import_name": "rich.columns",
+      "nlines": 190,
+      "mutation_lineno": 97,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                row_count = (item_count + column_count - 1) // column_count\n+                row_count = (item_count - column_count - 1) // column_count",
+      "pytest_files": [
+        "tests/test_columns.py",
+        "tests/test_columns_align.py"
+      ],
+      "sha256": "0d2ec7b2f0404faf5f966fb5732fda10d1a42f640fdc2fc113823171d5befa95"
+    },
+    {
+      "mod_id": "mod_083",
+      "pair_id": "V2P046",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "pop_theme",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/theme.py",
+      "import_name": "rich.theme",
+      "nlines": 117,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_theme.py"
+      ],
+      "sha256": "5d57a534575f444ab78bcc195a7554e7011897e29b2248d8bfa7db3dee3fb382"
+    },
+    {
+      "mod_id": "mod_084",
+      "pair_id": "V2P098",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "from_data",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/tableutils.py",
+      "import_name": "boltons.tableutils",
+      "nlines": 591,
+      "mutation_lineno": 366,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if max_depth < 1:\n+        if max_depth <= 1:",
+      "pytest_files": [
+        "tests/test_tableutils.py"
+      ],
+      "sha256": "99313296e7d740a8abfde6b684c6954513b7227940600c534af71feef8b00b01"
+    },
+    {
+      "mod_id": "mod_085",
+      "pair_id": "V2P051",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "get_row",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/box.py",
+      "import_name": "rich.box",
+      "nlines": 474,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_box.py"
+      ],
+      "sha256": "a30e0f097e025053cb794c94b5ecba0997f3a8c5a5cb2084384a26ca19a7def0"
+    },
+    {
+      "mod_id": "mod_086",
+      "pair_id": "V2P004",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "represent_object",
+      "repo": "pyyaml",
+      "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+      "rel_in_src": "yaml/representer.py",
+      "import_name": "yaml.representer",
+      "nlines": 390,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/legacy_tests/test_representer.py"
+      ],
+      "sha256": "f9d4d1f3a3f91eb42eba59dc16ce58b24e429c5286c7b6682244ca4b033d7f64"
+    },
+    {
+      "mod_id": "mod_087",
+      "pair_id": "V2P024",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "update",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/status.py",
+      "import_name": "rich.status",
+      "nlines": 131,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_status.py"
+      ],
+      "sha256": "0a62d342e388bfd970edef623bbe3b3ee86caeb351c4bb10a324d6da71ca6a16"
+    },
+    {
+      "mod_id": "mod_088",
+      "pair_id": "V2P069",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "to_dict",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/direct_url.py",
+      "import_name": "packaging.direct_url",
+      "nlines": 318,
+      "mutation_lineno": 305,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if generate_legacy_hash and self.archive_info and self.archive_info.hashes:\n+        if generate_legacy_hash or self.archive_info and self.archive_info.hashes:",
+      "pytest_files": [
+        "tests/test_direct_url.py"
+      ],
+      "sha256": "87e5a20f2e8164ea1e2aa2f57a495e0b924e1ad9191fd712667ec96ec29e56d9"
+    },
+    {
+      "mod_id": "mod_089",
+      "pair_id": "V2P056",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "is_gen",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/_compat.py",
+      "import_name": "attr._compat",
+      "nlines": 128,
+      "mutation_lineno": 120,
+      "mutation": "not in -> in",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if f not in _IS_GENERATOR_RESULTS:\n+            if f in _IS_GENERATOR_RESULTS:",
+      "pytest_files": [
+        "tests/test_compat.py"
+      ],
+      "sha256": "7433af7fe77282f945c5da4593bf9c0825261e9bed63803e5c79b9f424dabe7b"
+    },
+    {
+      "mod_id": "mod_090",
+      "pair_id": "V2P057",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "write_dl",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/formatting.py",
+      "import_name": "click.formatting",
+      "nlines": 330,
+      "mutation_lineno": 264,
+      "mutation": "<= -> <",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if term_len(first) <= first_col - col_spacing:\n+            if term_len(first) < first_col - col_spacing:",
+      "pytest_files": [
+        "tests/test_formatting.py"
+      ],
+      "sha256": "5c3bd9607e8c48db32a7b9d37e3598e85e10555b0944a05ee0e081d39e5f5d45"
+    },
+    {
+      "mod_id": "mod_091",
+      "pair_id": "V2P016",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "write",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/file_proxy.py",
+      "import_name": "rich.file_proxy",
+      "nlines": 61,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_file_proxy.py"
+      ],
+      "sha256": "13fdd5df7d4700e29a562583697e86037d4153d56b5fc7b61549eb418c2c9c33"
+    },
+    {
+      "mod_id": "mod_092",
+      "pair_id": "V2P081",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "stop",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/live.py",
+      "import_name": "rich.live",
+      "nlines": 404,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_live.py",
+        "tests/test_live_render.py"
+      ],
+      "sha256": "930590768ead2d76fdc0a94f60b60ec5b95aed6f3d1f0191af6bbfc31c8f2833"
+    },
+    {
+      "mod_id": "mod_093",
+      "pair_id": "V2P008",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "_get_signature",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_inspect.py",
+      "import_name": "rich._inspect",
+      "nlines": 273,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_inspect.py"
+      ],
+      "sha256": "d5a2516a7cdb937b88b5d742c8c0bdb71368ee15d3212c5e755887074b627e72"
+    },
+    {
+      "mod_id": "mod_094",
+      "pair_id": "V2P016",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "write",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/file_proxy.py",
+      "import_name": "rich.file_proxy",
+      "nlines": 61,
+      "mutation_lineno": 36,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                lines.append(\"\".join(buffer) + line)\n+                lines.append(\"\".join(buffer) - line)",
+      "pytest_files": [
+        "tests/test_file_proxy.py"
+      ],
+      "sha256": "5d04dad12ffab8046e969bc0c37cf128cc329fe580ab67a4e83ff2f2ce6b7547"
+    },
+    {
+      "mod_id": "mod_095",
+      "pair_id": "V2P033",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "_match_or_else",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/lexer.py",
+      "import_name": "jmespath.lexer",
+      "nlines": 209,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_lexer.py"
+      ],
+      "sha256": "02784a3263e1ed318a2442d1b3e696255d3f4cf8e9b3a84e9463cb2803b85b13"
+    },
+    {
+      "mod_id": "mod_096",
+      "pair_id": "V2P064",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "rich_cast",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/protocol.py",
+      "import_name": "rich.protocol",
+      "nlines": 42,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_protocol.py"
+      ],
+      "sha256": "d262d653e98d42eb442b5357290a9736c1b33bc99d9a804a0555d201d3e4d154"
+    },
+    {
+      "mod_id": "mod_097",
+      "pair_id": "V2P070",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "parse",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/formparser.py",
+      "import_name": "werkzeug.formparser",
+      "nlines": 534,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_formparser.py"
+      ],
+      "sha256": "2dd5ad2f3344497425def4702c996a44d0d306ff6498222fe57fa5fb7db8487b"
+    },
+    {
+      "mod_id": "mod_098",
+      "pair_id": "V2P017",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "_ensure_tuple",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/_version_info.py",
+      "import_name": "attr._version_info",
+      "nlines": 90,
+      "mutation_lineno": 59,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if self.__class__ is other.__class__:\n+        if self.__class__ is not other.__class__:",
+      "pytest_files": [
+        "tests/test_version_info.py"
+      ],
+      "sha256": "26fb141c8d2f75b84e95f9be436026fb00d5bc2c9e26029939808a3dad786a87"
+    },
+    {
+      "mod_id": "mod_099",
+      "pair_id": "V2P008",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "_get_signature",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_inspect.py",
+      "import_name": "rich._inspect",
+      "nlines": 273,
+      "mutation_lineno": 103,
+      "mutation": "or -> and",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        qualname = name or getattr(obj, \"__qualname__\", name)\n+        qualname = name and getattr(obj, \"__qualname__\", name)",
+      "pytest_files": [
+        "tests/test_inspect.py"
+      ],
+      "sha256": "2bc12cee013064f1fb9a4e62c373eeec94747092e9f2a7098d446b6e22cdb717"
+    },
+    {
+      "mod_id": "mod_100",
+      "pair_id": "V2P018",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "_get_value",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/csp.py",
+      "import_name": "werkzeug.datastructures.csp",
+      "nlines": 177,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_datastructures.py",
+        "tests/test_http.py"
+      ],
+      "sha256": "f7479a97bcbb936aa302e53e05e60d840066d29500268cbcf4041e8fc69212f2"
+    },
+    {
+      "mod_id": "mod_101",
+      "pair_id": "V2P059",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "render",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/spinner.py",
+      "import_name": "rich.spinner",
+      "nlines": 133,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_spinner.py"
+      ],
+      "sha256": "343b5c5a6f775f8ebba1cbb82a17d907563eec03e72eb4a219dc106e6d49c0bf"
+    },
+    {
+      "mod_id": "mod_102",
+      "pair_id": "V2P019",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "compose_scalar_node",
+      "repo": "pyyaml",
+      "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+      "rel_in_src": "yaml/composer.py",
+      "import_name": "yaml.composer",
+      "nlines": 140,
+      "mutation_lineno": 91,
+      "mutation": "or -> and",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if tag is None or tag == '!':\n+        if tag is None and tag == '!':",
+      "pytest_files": [
+        "tests/legacy_tests/test_structure.py"
+      ],
+      "sha256": "8d4db46a2073660bc07ce266b2d5e1823df905298244394cb239a6f125cda123"
+    },
+    {
+      "mod_id": "mod_103",
+      "pair_id": "V2P043",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "reconstruct",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/reconstruct.py",
+      "import_name": "lark.reconstruct",
+      "nlines": 110,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_reconstructor.py"
+      ],
+      "sha256": "c28670f283cbc7f8f7c17744c7298a0ed3cba68b9f8b3e5b271788474ac92f53"
+    },
+    {
+      "mod_id": "mod_104",
+      "pair_id": "V2P024",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "update",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/status.py",
+      "import_name": "rich.status",
+      "nlines": 131,
+      "mutation_lineno": 74,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if spinner is not None:\n+        if spinner is None:",
+      "pytest_files": [
+        "tests/test_status.py"
+      ],
+      "sha256": "48f5502e87fdffe5a4070e8e452bd77db9a50d07beb95fe43da877ad8ddbe25c"
+    },
+    {
+      "mod_id": "mod_105",
+      "pair_id": "V2P060",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "wrapper",
+      "repo": "semver",
+      "commit": "a4b7d337b1eb699ad4bad532a4b3fc68f8ec2408",
+      "rel_in_src": "semver/_deprecated.py",
+      "import_name": "semver._deprecated",
+      "nlines": 412,
+      "mutation_lineno": 66,
+      "mutation": "or -> and",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        r = replace or f\n+        r = replace and f",
+      "pytest_files": [
+        "tests/test_deprecated_functions.py"
+      ],
+      "sha256": "a3d3e9c6a260602368be2db85a0cf2d996c4f87a1f445ffc360dfae9f3af8c2d"
+    },
+    {
+      "mod_id": "mod_106",
+      "pair_id": "V2P047",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "_get_pulse_segments",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/progress_bar.py",
+      "import_name": "rich.progress_bar",
+      "nlines": 224,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_bar.py",
+        "tests/test_progress.py"
+      ],
+      "sha256": "cb3c735acf01ea4c054a3167264b613985446aeaf46f71b00b66b7249e848fb8"
+    },
+    {
+      "mod_id": "mod_107",
+      "pair_id": "V2P049",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "show_help",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/decorators.py",
+      "import_name": "click.decorators",
+      "nlines": 622,
+      "mutation_lineno": 608,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if value and not ctx.resilient_parsing:\n+        if value or not ctx.resilient_parsing:",
+      "pytest_files": [
+        "tests/test_command_decorators.py"
+      ],
+      "sha256": "ed043dc11879de8298d6d541e90649174215dfea39ae0dd6f0e3bf1120e21488"
+    },
+    {
+      "mod_id": "mod_108",
+      "pair_id": "V2P087",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "legacy_windows_render",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_windows_renderer.py",
+      "import_name": "rich._windows_renderer",
+      "nlines": 57,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_windows_renderer.py"
+      ],
+      "sha256": "ecf46dd2bc3dca0e0a9e9d0ffe7ceddb2f6158da171e1380b4602ceb5aea4b91"
+    },
+    {
+      "mod_id": "mod_109",
+      "pair_id": "V2P088",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "_loads_unsafe_impl",
+      "repo": "itsdangerous",
+      "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "rel_in_src": "itsdangerous/serializer.py",
+      "import_name": "itsdangerous.serializer",
+      "nlines": 405,
+      "mutation_lineno": 383,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if e.payload is None:\n+            if e.payload is not None:",
+      "pytest_files": [
+        "tests/test_itsdangerous/test_serializer.py"
+      ],
+      "sha256": "ba542fae9d9277538df4c732b38d9227e340035149490b3a0a141619f72de458"
+    },
+    {
+      "mod_id": "mod_110",
+      "pair_id": "V2P038",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "position_cursor",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/live_render.py",
+      "import_name": "rich.live_render",
+      "nlines": 117,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_live_render.py"
+      ],
+      "sha256": "3c46935d513cb5750edb474ef5e4eddf626ef29cdd962c7bd1d872b3dec42adb"
+    },
+    {
+      "mod_id": "mod_111",
+      "pair_id": "V2P093",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "parse_wheel_filename",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/utils.py",
+      "import_name": "packaging.utils",
+      "nlines": 373,
+      "mutation_lineno": 269,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    parts = filename.split(\"-\", dashes - 2)\n+    parts = filename.split(\"-\", dashes + 2)",
+      "pytest_files": [
+        "tests/test_utils.py"
+      ],
+      "sha256": "060b65a94592ed0daa61e4350bb42777099011fff9e0d0c97a90073b21261109"
+    },
+    {
+      "mod_id": "mod_112",
+      "pair_id": "V2P062",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "add",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/tree.py",
+      "import_name": "rich.tree",
+      "nlines": 256,
+      "mutation_lineno": 79,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            guide_style=self.guide_style if guide_style is None else guide_style,\n+            guide_style=self.guide_style if guide_style is not None else guide_style,",
+      "pytest_files": [
+        "tests/test_tree.py"
+      ],
+      "sha256": "e8887811b1becfefcf31ccc91f010d60f73c7729aa070cabf76a481b9e87e747"
+    },
+    {
+      "mod_id": "mod_113",
+      "pair_id": "V2P053",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "from_header",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/etag.py",
+      "import_name": "werkzeug.datastructures.etag",
+      "nlines": 439,
+      "mutation_lineno": 67,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        return cls(value[start + 1 : -1], weak)\n+        return cls(value[start - 1 : -1], weak)",
+      "pytest_files": [
+        "tests/test_apply_conditions.py",
+        "tests/test_apply_range.py"
+      ],
+      "sha256": "f0442fc8de13c89dde791675dc943e2b4141f10f051164ba367f5fbba13e0a42"
+    },
+    {
+      "mod_id": "mod_114",
+      "pair_id": "V2P080",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "generate_password_hash",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/security.py",
+      "import_name": "werkzeug.security",
+      "nlines": 218,
+      "mutation_lineno": 113,
+      "mutation": "<= -> <",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if salt_length <= 0:\n+    if salt_length < 0:",
+      "pytest_files": [
+        "tests/test_security.py"
+      ],
+      "sha256": "72372dea785d48b78444c48236f813221ad04b8012a7a5d18808bfd6ba816a15"
+    },
+    {
+      "mod_id": "mod_115",
+      "pair_id": "V2P096",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "_term",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/parsers/cyk.py",
+      "import_name": "lark.parsers.cyk",
+      "nlines": 341,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_parser.py"
+      ],
+      "sha256": "2429fc58747ec180ecf23879f08199e932d28a4e73b86b3110e6a57b5997e414"
+    },
+    {
+      "mod_id": "mod_116",
+      "pair_id": "V2P046",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "pop_theme",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/theme.py",
+      "import_name": "rich.theme",
+      "nlines": 117,
+      "mutation_lineno": 108,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if len(self._entries) == 1:\n+        if len(self._entries) != 1:",
+      "pytest_files": [
+        "tests/test_theme.py"
+      ],
+      "sha256": "13be678ff2ace4d603f7a332c5a20a5a73a03be06b240d091ef7c3d6fd21d292"
+    },
+    {
+      "mod_id": "mod_117",
+      "pair_id": "V2P034",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "from_header",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/range.py",
+      "import_name": "werkzeug.datastructures.range",
+      "nlines": 492,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_apply_range.py"
+      ],
+      "sha256": "d85ca1fe7a01254661f7f5d6b91e9664655492b246f8252cbefc931a1cc22d62"
+    },
+    {
+      "mod_id": "mod_118",
+      "pair_id": "V2P051",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "get_row",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/box.py",
+      "import_name": "rich.box",
+      "nlines": 474,
+      "mutation_lineno": 138,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        elif level == \"mid\":\n+        elif level != \"mid\":",
+      "pytest_files": [
+        "tests/test_box.py"
+      ],
+      "sha256": "cea0c12f645df361eabb6cf7e93ea56babac07d852125708a6b2b4b9abc0d52c"
+    },
+    {
+      "mod_id": "mod_119",
+      "pair_id": "V2P044",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "derive_key",
+      "repo": "itsdangerous",
+      "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "rel_in_src": "itsdangerous/signer.py",
+      "import_name": "itsdangerous.signer",
+      "nlines": 267,
+      "mutation_lineno": 206,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        elif self.key_derivation == \"hmac\":\n+        elif self.key_derivation != \"hmac\":",
+      "pytest_files": [
+        "tests/test_itsdangerous/test_signer.py"
+      ],
+      "sha256": "ec06e362900e7e9223133b39f3b9325c7214a18cf6914e909795e232fbed0855"
+    },
+    {
+      "mod_id": "mod_120",
+      "pair_id": "V2P067",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "auto_repr",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/repr.py",
+      "import_name": "rich.repr",
+      "nlines": 136,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_repr.py"
+      ],
+      "sha256": "05eff7fa4a72fb26ec3a0865b9999b4074e9ad4f486d7d03d3ef3858f71554c4"
+    },
+    {
+      "mod_id": "mod_121",
+      "pair_id": "V2P042",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "resolve_color_default",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/globals.py",
+      "import_name": "click.globals",
+      "nlines": 68,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_imports.py"
+      ],
+      "sha256": "a04afa8359a321f88433c3689045a9cde5763eb1938ceb983c7749798ffbb46f"
+    },
+    {
+      "mod_id": "mod_122",
+      "pair_id": "V2P006",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "_get_real_value",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/middleware/proxy_fix.py",
+      "import_name": "werkzeug.middleware.proxy_fix",
+      "nlines": 178,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/middleware/test_proxy_fix.py"
+      ],
+      "sha256": "01dce113de53a8538dc21e94ea2ecc3119922c73d5cb5f1324fc50ee886e1a9a"
+    },
+    {
+      "mod_id": "mod_123",
+      "pair_id": "V2P005",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "_plain_int",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/_internal.py",
+      "import_name": "werkzeug._internal",
+      "nlines": 108,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_internal.py"
+      ],
+      "sha256": "28e815205a5b0a087b9c0b6eeff9794f274ba175342bb894c66322319b1de09c"
+    },
+    {
+      "mod_id": "mod_124",
+      "pair_id": "V2P076",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "shrinkuser",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/pathutils.py",
+      "import_name": "boltons.pathutils",
+      "nlines": 184,
+      "mutation_lineno": 159,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    prefix = userhome_dpath.rstrip(os.path.sep) + os.path.sep\n+    prefix = userhome_dpath.rstrip(os.path.sep) - os.path.sep",
+      "pytest_files": [
+        "tests/test_pathutils.py"
+      ],
+      "sha256": "828d4f4d7a8ea2712319d1c5fb4b9167b7532eea5fb7171b9dbaaf41c4099434"
+    },
+    {
+      "mod_id": "mod_125",
+      "pair_id": "V2P095",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "iter_renderables",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/columns.py",
+      "import_name": "rich.columns",
+      "nlines": 190,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_columns.py",
+        "tests/test_columns_align.py"
+      ],
+      "sha256": "a66bdb6672b904379ae7f6fe8b7d2d803f82ed052c2cab7016c982d643f6b22c"
+    },
+    {
+      "mod_id": "mod_126",
+      "pair_id": "V2P026",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "ceil",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/mathutils.py",
+      "import_name": "boltons.mathutils",
+      "nlines": 260,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_mathutils.py"
+      ],
+      "sha256": "529cbc85133f8484a769bc6060f3f8b01670c39503927736640bf1e0d20a4dc3"
+    },
+    {
+      "mod_id": "mod_127",
+      "pair_id": "V2P056",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "is_gen",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/_compat.py",
+      "import_name": "attr._compat",
+      "nlines": 128,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_compat.py"
+      ],
+      "sha256": "8922b6582aca069b25da3374bcc781018bdd178170980256e18a3d8826f50362"
+    },
+    {
+      "mod_id": "mod_128",
+      "pair_id": "V2P057",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "write_dl",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/formatting.py",
+      "import_name": "click.formatting",
+      "nlines": 330,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_formatting.py"
+      ],
+      "sha256": "4d6fd7cfe3807907c311b43945349b60f1b55625a7d321ef6738b6afe18d17a4"
+    },
+    {
+      "mod_id": "mod_129",
+      "pair_id": "V2P009",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "set_value",
+      "repo": "marshmallow",
+      "commit": "f268f0c4d12c4edb43743ca5703eed7954320245",
+      "rel_in_src": "marshmallow/utils.py",
+      "import_name": "marshmallow.utils",
+      "nlines": 162,
+      "mutation_lineno": 137,
+      "mutation": "in -> not in",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if \".\" in key:\n+    if \".\" not in key:",
+      "pytest_files": [
+        "tests/test_utils.py"
+      ],
+      "sha256": "c1c16782d6f84cbd037cd4bcfcb3ced8dc2dae9e626a73125153e467d30ae37d"
+    },
+    {
+      "mod_id": "mod_130",
+      "pair_id": "V2P040",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "isoparse",
+      "repo": "dateutil",
+      "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+      "rel_in_src": "dateutil/parser/isoparser.py",
+      "import_name": "dateutil.parser.isoparser",
+      "nlines": 427,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_isoparser.py"
+      ],
+      "sha256": "6cc0624a8386187123df0b5b6983f19fa1314a8ab1f8dae5f6408c0198520642"
+    },
+    {
+      "mod_id": "mod_131",
+      "pair_id": "V2P097",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "get_format_args",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/formatutils.py",
+      "import_name": "boltons.formatutils",
+      "nlines": 357,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_formatutils.py"
+      ],
+      "sha256": "9ea732109b73c3dc63516bbcc2e253a81596ae54499dc3392459634932260601"
+    },
+    {
+      "mod_id": "mod_132",
+      "pair_id": "V2P083",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "_set_directive",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/cache_control.py",
+      "import_name": "werkzeug.datastructures.cache_control",
+      "nlines": 404,
+      "mutation_lineno": 339,
+      "mutation": "or -> and",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        elif value is None or value is False:\n+        elif value is None and value is False:",
+      "pytest_files": [
+        "tests/test_http.py",
+        "tests/test_send_file.py"
+      ],
+      "sha256": "12f361ef77eda205645bad269e0d2e5ed9a8f0c7d8630c8dc6eff6b08cf3298e"
+    },
+    {
+      "mod_id": "mod_133",
+      "pair_id": "V2P091",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "namedlist",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/namedutils.py",
+      "import_name": "boltons.namedutils",
+      "nlines": 394,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_namedutils.py"
+      ],
+      "sha256": "e8d68c5a4d40153d61f677da9c661db93948464cc6518b0a1b7b55fe81830e3f"
+    },
+    {
+      "mod_id": "mod_134",
+      "pair_id": "V2P039",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "default_if_none",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/converters.py",
+      "import_name": "attr.converters",
+      "nlines": 161,
+      "mutation_lineno": 94,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if default is not NOTHING and factory is not None:\n+    if default is not NOTHING or factory is not None:",
+      "pytest_files": [
+        "tests/test_converters.py"
+      ],
+      "sha256": "316d759f57f8a752887806596fa9ed6467d06ffaa48f5084bf7b0cf7ae486c94"
+    },
+    {
+      "mod_id": "mod_135",
+      "pair_id": "V2P094",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "close",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/middleware/lint.py",
+      "import_name": "werkzeug.middleware.lint",
+      "nlines": 435,
+      "mutation_lineno": 193,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            elif 100 <= status_code < 200 or status_code == 204:\n+            elif 100 <= status_code < 200 or status_code != 204:",
+      "pytest_files": [
+        "tests/middleware/test_lint.py"
+      ],
+      "sha256": "17b057f9cd8f34083230e4f91998afae40e7cd9c6307a361c5c44e66058b2532"
+    },
+    {
+      "mod_id": "mod_136",
+      "pair_id": "V2P063",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "enclosing_tokens",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/_tokenizer.py",
+      "import_name": "packaging._tokenizer",
+      "nlines": 236,
+      "mutation_lineno": 225,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        assert token.name == open_token, f\"Expected {open_token!r}, have {token!r}\"\n+        assert token.name != open_token, f\"Expected {open_token!r}, have {token!r}\"",
+      "pytest_files": [
+        "tests/test_tokenizer.py"
+      ],
+      "sha256": "93a9b597a46a58f932088155ae6302f10b752bf96adcfd156fd583fcb4793147"
+    },
+    {
+      "mod_id": "mod_137",
+      "pair_id": "V2P014",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "send_event",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/sansio/multipart.py",
+      "import_name": "werkzeug.sansio.multipart",
+      "nlines": 338,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/sansio/test_multipart.py"
+      ],
+      "sha256": "15b083e11848e0041b32657722267c7a1e2ab443c2f17b8f19408a0293871543"
+    },
+    {
+      "mod_id": "mod_138",
+      "pair_id": "V2P045",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "_parse",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/markup.py",
+      "import_name": "rich.markup",
+      "nlines": 254,
+      "mutation_lineno": 102,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if position < len(markup):\n+    if position <= len(markup):",
+      "pytest_files": [
+        "tests/test_markup.py"
+      ],
+      "sha256": "dc76c88fa20ad5b0596f4ef1e90006e694811d6c1bd198cc674720a3f8b6a147"
+    },
+    {
+      "mod_id": "mod_139",
+      "pair_id": "V2P001",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "_get_version",
+      "repo": "markdown",
+      "commit": "5609061bd3359e882b745de184ebfe5ef1c08011",
+      "rel_in_src": "markdown/__meta__.py",
+      "import_name": "markdown.__meta__",
+      "nlines": 52,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_meta.py"
+      ],
+      "sha256": "3b1f10c66a9a8e47b4807e4ec53b2412d3db897bd6f37d9936bc74fe301bceed"
+    },
+    {
+      "mod_id": "mod_140",
+      "pair_id": "V2P023",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "collect",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/errors.py",
+      "import_name": "packaging.errors",
+      "nlines": 97,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_errors.py"
+      ],
+      "sha256": "e36af03a187983678b363a8a6679d0c27ca02d17364400fd9df0a8bbc2fd36ac"
+    },
+    {
+      "mod_id": "mod_141",
+      "pair_id": "V2P064",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "rich_cast",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/protocol.py",
+      "import_name": "rich.protocol",
+      "nlines": 42,
+      "mutation_lineno": 30,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    while hasattr(renderable, \"__rich__\") and not isinstance(renderable, type):\n+    while hasattr(renderable, \"__rich__\") or not isinstance(renderable, type):",
+      "pytest_files": [
+        "tests/test_protocol.py"
+      ],
+      "sha256": "88a3d391facd2e2507a1527fe4b3b348a3754af0f893c825b7e525f59f915ffa"
+    },
+    {
+      "mod_id": "mod_142",
+      "pair_id": "V2P050",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "easter",
+      "repo": "dateutil",
+      "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+      "rel_in_src": "dateutil/easter.py",
+      "import_name": "dateutil.easter",
+      "nlines": 89,
+      "mutation_lineno": 71,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if method == 2:\n+        if method != 2:",
+      "pytest_files": [
+        "tests/test_easter.py"
+      ],
+      "sha256": "6f269a84eeb6e7ad8344951a18031c3bea6860802261047da45c517b9f0c41d1"
+    },
+    {
+      "mod_id": "mod_143",
+      "pair_id": "V2P043",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "reconstruct",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/reconstruct.py",
+      "import_name": "lark.reconstruct",
+      "nlines": 110,
+      "mutation_lineno": 105,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if insert_spaces and prev_item and item and is_id_continue(prev_item[-1]) and is_id_continue(item[0]):\n+            if insert_spaces or prev_item and item and is_id_continue(prev_item[-1]) and is_id_continue(item[0]):",
+      "pytest_files": [
+        "tests/test_reconstructor.py"
+      ],
+      "sha256": "104ccd8a8e487352233d7f27656b07feac19f3fde9aa95e6e10188b32d52de7a"
+    },
+    {
+      "mod_id": "mod_144",
+      "pair_id": "V2P066",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "_pluralize",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/exceptions.py",
+      "import_name": "jmespath.exceptions",
+      "nlines": 123,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_functions.py",
+        "tests/test_lexer.py"
+      ],
+      "sha256": "8f066fa0163403412793a525052bb93f90f43e88e80383ddf203510fbe697ed4"
+    },
+    {
+      "mod_id": "mod_145",
+      "pair_id": "V2P012",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "process_response",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/prompt.py",
+      "import_name": "rich.prompt",
+      "nlines": 397,
+      "mutation_lineno": 359,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        return value == self.choices[0]\n+        return value != self.choices[0]",
+      "pytest_files": [
+        "tests/test_prompt.py"
+      ],
+      "sha256": "af1eaa4d5d8dde498eb80fc5e8d25fb0c4d7ff8bd2f4425a7d78abb69a89b636"
+    },
+    {
+      "mod_id": "mod_146",
+      "pair_id": "V2P071",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "align_text",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/panel.py",
+      "import_name": "rich.panel",
+      "nlines": 318,
+      "mutation_lineno": 176,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            excess_space = width - cell_len(text.plain)\n+            excess_space = width + cell_len(text.plain)",
+      "pytest_files": [
+        "tests/test_panel.py"
+      ],
+      "sha256": "66615b28cfe8637c00aab6af4f2b67ae9422dd30739454fca5ffe16cf5c8d6fd"
+    },
+    {
+      "mod_id": "mod_147",
+      "pair_id": "V2P052",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "highlight",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/highlighter.py",
+      "import_name": "rich.highlighter",
+      "nlines": 233,
+      "mutation_lineno": 133,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            while cursor < len(plain):\n+            while cursor <= len(plain):",
+      "pytest_files": [
+        "tests/test_highlighter.py"
+      ],
+      "sha256": "5f4b949942effde1f36fbc4d6fd36ea8bf0f658cb45b6a9997599be95a1d8bfd"
+    },
+    {
+      "mod_id": "mod_148",
+      "pair_id": "V2P072",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "generate_segments",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/align.py",
+      "import_name": "rich.align",
+      "nlines": 321,
+      "mutation_lineno": 168,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            elif align == \"left\":\n+            elif align != \"left\":",
+      "pytest_files": [
+        "tests/test_align.py",
+        "tests/test_columns_align.py"
+      ],
+      "sha256": "040fea27c30dc2a8a1d5969a7a8e798a73f1638bcbce9c6e431273c6727d8c55"
+    },
+    {
+      "mod_id": "mod_149",
+      "pair_id": "V2P083",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "_set_directive",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/cache_control.py",
+      "import_name": "werkzeug.datastructures.cache_control",
+      "nlines": 404,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_http.py",
+        "tests/test_send_file.py"
+      ],
+      "sha256": "92cbce7dabc0952db9efe091cd68d7e003ccce695a8af7f7fd4dc1f330a5e0a1"
+    },
+    {
+      "mod_id": "mod_150",
+      "pair_id": "V2P054",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "to_header",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/auth.py",
+      "import_name": "werkzeug.datastructures.auth",
+      "nlines": 460,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_exceptions.py",
+        "tests/test_http.py"
+      ],
+      "sha256": "a6470fae4d2060f2a5d7da0760bc1d69d4a1f4666c3389c5cba3c0d07133f3e9"
+    },
+    {
+      "mod_id": "mod_151",
+      "pair_id": "V2P096",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "_term",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/parsers/cyk.py",
+      "import_name": "lark.parsers.cyk",
+      "nlines": 341,
+      "mutation_lineno": 271,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if len(rule.rhs) > 1 and any(isinstance(x, T) for x in rule.rhs):\n+        if len(rule.rhs) >= 1 and any(isinstance(x, T) for x in rule.rhs):",
+      "pytest_files": [
+        "tests/test_parser.py"
+      ],
+      "sha256": "fdc7628beac1ef873b413604812deadff151d5f3180441e04eb8ca0465b222c9"
+    },
+    {
+      "mod_id": "mod_152",
+      "pair_id": "V2P011",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "justify",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/containers.py",
+      "import_name": "rich.containers",
+      "nlines": 155,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_containers.py"
+      ],
+      "sha256": "ca0f19b1e235d737e87b942c725c5f53d4917616119e36a95c5e31ea322ea36e"
+    },
+    {
+      "mod_id": "mod_153",
+      "pair_id": "V2P052",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "highlight",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/highlighter.py",
+      "import_name": "rich.highlighter",
+      "nlines": 233,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_highlighter.py"
+      ],
+      "sha256": "4fa87aeb7e9524cb57a74a654f5f483f06c5709537b2b82ced72efb4cb0d7695"
+    },
+    {
+      "mod_id": "mod_154",
+      "pair_id": "V2P075",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "_ansi_tokenize",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/ansi.py",
+      "import_name": "rich.ansi",
+      "nlines": 242,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_ansi.py"
+      ],
+      "sha256": "98062227f261e357f18460a30ee542c75efca2bcf7e54c4d994647dd4ca0efe2"
+    },
+    {
+      "mod_id": "mod_155",
+      "pair_id": "V2P058",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "get_context",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/exceptions.py",
+      "import_name": "lark.exceptions",
+      "nlines": 293,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_cache.py",
+        "tests/test_parser.py"
+      ],
+      "sha256": "d42782f17face69f729d355f8f9169c24700277444778fc3207320aa68ed7d72"
+    },
+    {
+      "mod_id": "mod_156",
+      "pair_id": "V2P077",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "exclude_",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/filters.py",
+      "import_name": "attr.filters",
+      "nlines": 73,
+      "mutation_lineno": 68,
+      "mutation": "in -> not in",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            or attribute.name in names\n+            or attribute.name not in names",
+      "pytest_files": [
+        "tests/test_filters.py"
+      ],
+      "sha256": "eb4f2c3d56dd84894d90f7f1f92c1a31504b0dc2c046051ac863db2b2e317dc4"
+    },
+    {
+      "mod_id": "mod_157",
+      "pair_id": "V2P036",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "test_var",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/tree_templates.py",
+      "import_name": "lark.tree_templates",
+      "nlines": 181,
+      "mutation_lineno": 44,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            and len(var.children) > 0\n+            and len(var.children) >= 0",
+      "pytest_files": [
+        "tests/test_tree_templates.py"
+      ],
+      "sha256": "843f77a04f5c495ecff1dac3ab3b1796ae823c7299058a01111bc37000648729"
+    },
+    {
+      "mod_id": "mod_158",
+      "pair_id": "V2P047",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "_get_pulse_segments",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/progress_bar.py",
+      "import_name": "rich.progress_bar",
+      "nlines": 224,
+      "mutation_lineno": 111,
+      "mutation": "+ -> -",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            fade = 0.5 + cos(position * pi * 2) / 2.0\n+            fade = 0.5 - cos(position * pi * 2) / 2.0",
+      "pytest_files": [
+        "tests/test_bar.py",
+        "tests/test_progress.py"
+      ],
+      "sha256": "0b373e0d430db44b1fd7642747f11528be457c7e77fb56ab44017227ff5e6590"
+    },
+    {
+      "mod_id": "mod_159",
+      "pair_id": "V2P032",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "uri_to_iri",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/urls.py",
+      "import_name": "werkzeug.urls",
+      "nlines": 210,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_urls.py"
+      ],
+      "sha256": "a52fcd77ed4e3b4d0aa6a192b69390b3a9ed14fccda672bafcdb505eac872527"
+    },
+    {
+      "mod_id": "mod_160",
+      "pair_id": "V2P085",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "strip_docstrings",
+      "repo": "lark",
+      "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+      "rel_in_src": "lark/tools/standalone.py",
+      "import_name": "lark.tools.standalone",
+      "nlines": 197,
+      "mutation_lineno": 107,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if slineno > last_lineno:\n+        if slineno >= last_lineno:",
+      "pytest_files": [
+        "tests/test_tools.py"
+      ],
+      "sha256": "a47f4a4738297448f7b5085b0371d0d662b85207612a9bcfede9b1a18ac2e481"
+    },
+    {
+      "mod_id": "mod_161",
+      "pair_id": "V2P035",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "loader",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/middleware/shared_data.py",
+      "import_name": "werkzeug.middleware.shared_data",
+      "nlines": 254,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/middleware/test_shared_data.py"
+      ],
+      "sha256": "3d31708326f802ba66d655284e37f4ff050245351bdf8ba3f59b49c3d90c878d"
+    },
+    {
+      "mod_id": "mod_162",
+      "pair_id": "V2P067",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "auto_repr",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/repr.py",
+      "import_name": "rich.repr",
+      "nlines": 136,
+      "mutation_lineno": 44,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                            if default and default[0] == value:\n+                            if default or default[0] == value:",
+      "pytest_files": [
+        "tests/test_repr.py"
+      ],
+      "sha256": "fd2b988e61ad26430b48c77c6bf352294d6cb75673acd247258d70475c9a537d"
+    },
+    {
+      "mod_id": "mod_163",
+      "pair_id": "V2P078",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "parse_node",
+      "repo": "pyyaml",
+      "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+      "rel_in_src": "yaml/parser.py",
+      "import_name": "yaml.parser",
+      "nlines": 590,
+      "mutation_lineno": 328,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                    if (token.plain and tag is None) or tag == '!':\n+                    if (token.plain or tag is None) or tag == '!':",
+      "pytest_files": [
+        "tests/legacy_tests/test_canonical.py",
+        "tests/legacy_tests/test_structure.py"
+      ],
+      "sha256": "ec3f46415ca69716ec797bd8febe8b0c01de767a281e7ebd561b712165ffa010"
+    },
+    {
+      "mod_id": "mod_164",
+      "pair_id": "V2P022",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "clamp",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/measure.py",
+      "import_name": "rich.measure",
+      "nlines": 152,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_measure.py"
+      ],
+      "sha256": "e11b137da3fc61fb3a400527bb83686c7cdefc0ce3dfa7fb037bdf053380caae"
+    },
+    {
+      "mod_id": "mod_165",
+      "pair_id": "V2P030",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "seek",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/ioutils.py",
+      "import_name": "boltons.ioutils",
+      "nlines": 600,
+      "mutation_lineno": 435,
+      "mutation": "< -> <=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if pos < 0:\n+            if pos <= 0:",
+      "pytest_files": [
+        "tests/test_ioutils.py"
+      ],
+      "sha256": "02cb20bdc33b9f84e731da3c401e21acb89f3acaf6af47a5fe8f67307f9dea66"
+    },
+    {
+      "mod_id": "mod_166",
+      "pair_id": "V2P021",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "divide_line",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/_wrap.py",
+      "import_name": "rich._wrap",
+      "nlines": 94,
+      "mutation_lineno": 46,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        remaining_space = width - cell_offset\n+        remaining_space = width + cell_offset",
+      "pytest_files": [
+        "tests/test_console.py",
+        "tests/test_progress.py"
+      ],
+      "sha256": "b7329e922ae0bcd3419adbfa25354a099a4943abdbbed2f0f8dcc9c0c3d75d51"
+    },
+    {
+      "mod_id": "mod_167",
+      "pair_id": "V2P012",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "process_response",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/prompt.py",
+      "import_name": "rich.prompt",
+      "nlines": 397,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_prompt.py"
+      ],
+      "sha256": "192cc3242d2d40cb6e802f0d06283ba0f5efb2057b0127850640082ec8fe2a33"
+    },
+    {
+      "mod_id": "mod_168",
+      "pair_id": "V2P009",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "set_value",
+      "repo": "marshmallow",
+      "commit": "f268f0c4d12c4edb43743ca5703eed7954320245",
+      "rel_in_src": "marshmallow/utils.py",
+      "import_name": "marshmallow.utils",
+      "nlines": 162,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_utils.py"
+      ],
+      "sha256": "0dac38fc8221c4d64faa9c376ff8a1d39d2e457d88e54d2c0c93aa1d0c735444"
+    },
+    {
+      "mod_id": "mod_169",
+      "pair_id": "V2P060",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "wrapper",
+      "repo": "semver",
+      "commit": "a4b7d337b1eb699ad4bad532a4b3fc68f8ec2408",
+      "rel_in_src": "semver/_deprecated.py",
+      "import_name": "semver._deprecated",
+      "nlines": 412,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_deprecated_functions.py"
+      ],
+      "sha256": "bc775ad88e5f04b9f27593ab015aab8d3a60cb973e3e9186025754f18e3ef1e8"
+    },
+    {
+      "mod_id": "mod_170",
+      "pair_id": "V2P076",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "shrinkuser",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/pathutils.py",
+      "import_name": "boltons.pathutils",
+      "nlines": 184,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_pathutils.py"
+      ],
+      "sha256": "f72e8e0365266db0b23613add895d38866f6157658290cbc519f5898e289672e"
+    },
+    {
+      "mod_id": "mod_171",
+      "pair_id": "V2P001",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "_get_version",
+      "repo": "markdown",
+      "commit": "5609061bd3359e882b745de184ebfe5ef1c08011",
+      "rel_in_src": "markdown/__meta__.py",
+      "import_name": "markdown.__meta__",
+      "nlines": 52,
+      "mutation_lineno": 39,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    parts = 2 if version_info[2] == 0 else 3\n+    parts = 2 if version_info[2] != 0 else 3",
+      "pytest_files": [
+        "tests/test_meta.py"
+      ],
+      "sha256": "c7ab047f4be419e5370c5a9aefe13b3e4e4a12ab7aafc0872809bd97774a4aee"
+    },
+    {
+      "mod_id": "mod_172",
+      "pair_id": "V2P002",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "add",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/queueutils.py",
+      "import_name": "boltons.queueutils",
+      "nlines": 224,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_queueutils.py"
+      ],
+      "sha256": "2b4126462b36d31af601cc4575395c68c0807f24122f36b86474147cb5fb9f08"
+    },
+    {
+      "mod_id": "mod_173",
+      "pair_id": "V2P015",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "_to_str",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/filesize.py",
+      "import_name": "rich.filesize",
+      "nlines": 89,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_filesize.py"
+      ],
+      "sha256": "d6e7ba18dd46a99ba7af6b781c282f2fb7f415610790c5d2d3b4fbee972e0f9f"
+    },
+    {
+      "mod_id": "mod_174",
+      "pair_id": "V2P039",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "default_if_none",
+      "repo": "attrs",
+      "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+      "rel_in_src": "attr/converters.py",
+      "import_name": "attr.converters",
+      "nlines": 161,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_converters.py"
+      ],
+      "sha256": "449e3715cf8825c47ba4ebae3234ea20b16f3865d6edcc38d7a7c5ce0914e331"
+    },
+    {
+      "mod_id": "mod_175",
+      "pair_id": "V2P099",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "untag",
+      "repo": "flask",
+      "commit": "49943b5a94413a530761350f04e896f76e8d620e",
+      "rel_in_src": "flask/json/tag.py",
+      "import_name": "flask.json.tag",
+      "nlines": 328,
+      "mutation_lineno": 299,
+      "mutation": "!= -> ==",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if len(value) != 1:\n+        if len(value) == 1:",
+      "pytest_files": [
+        "tests/test_json_tag.py"
+      ],
+      "sha256": "f5e6521906a9e8b8d2924fab691596dab3da4eff85dd0b51b32de4b0d46d03d5"
+    },
+    {
+      "mod_id": "mod_176",
+      "pair_id": "V2P069",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "to_dict",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/direct_url.py",
+      "import_name": "packaging.direct_url",
+      "nlines": 318,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_direct_url.py"
+      ],
+      "sha256": "1075589401b5ff2334d6c3574e91adcf4b2bd5d78d7523217437dcad162a9e11"
+    },
+    {
+      "mod_id": "mod_177",
+      "pair_id": "V2P030",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "seek",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/ioutils.py",
+      "import_name": "boltons.ioutils",
+      "nlines": 600,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_ioutils.py"
+      ],
+      "sha256": "1c4d4c82ab44bd6d1ce992823bf280021407b1f8b3ec74c519fa21f7f188a87d"
+    },
+    {
+      "mod_id": "mod_178",
+      "pair_id": "V2P084",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "_join_param_hints",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/exceptions.py",
+      "import_name": "click.exceptions",
+      "nlines": 379,
+      "mutation_lineno": 20,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if param_hint is not None and not isinstance(param_hint, str):\n+    if param_hint is not None or not isinstance(param_hint, str):",
+      "pytest_files": [
+        "tests/test_arguments.py",
+        "tests/test_commands.py"
+      ],
+      "sha256": "05f6b2443e70b316d23b744c03333d25bdbb13106d2cc2d05801131eb62883e7"
+    },
+    {
+      "mod_id": "mod_179",
+      "pair_id": "V2P035",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "loader",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/middleware/shared_data.py",
+      "import_name": "werkzeug.middleware.shared_data",
+      "nlines": 254,
+      "mutation_lineno": 161,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if path is None:\n+            if path is not None:",
+      "pytest_files": [
+        "tests/middleware/test_shared_data.py"
+      ],
+      "sha256": "86c227f0f5637d74ae682f5e6d6bd9a1a3028d715daf9b0b7e8a7b8963ef9780"
+    },
+    {
+      "mod_id": "mod_180",
+      "pair_id": "V2P068",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "_cell_len",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/cells.py",
+      "import_name": "rich.cells",
+      "nlines": 353,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_cells.py"
+      ],
+      "sha256": "0996761abc298c6a0bf2d6079d165bb264d439b9945cfca846e4be8aaf99fa89"
+    },
+    {
+      "mod_id": "mod_181",
+      "pair_id": "V2P044",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "derive_key",
+      "repo": "itsdangerous",
+      "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+      "rel_in_src": "itsdangerous/signer.py",
+      "import_name": "itsdangerous.signer",
+      "nlines": 267,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_itsdangerous/test_signer.py"
+      ],
+      "sha256": "85d41ef5f64eb63e1299cad82d775b6021950cbfad355af3021084267be663c6"
+    },
+    {
+      "mod_id": "mod_182",
+      "pair_id": "V2P014",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "send_event",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/sansio/multipart.py",
+      "import_name": "werkzeug.sansio.multipart",
+      "nlines": 338,
+      "mutation_lineno": 331,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        elif isinstance(event, Data) and self.state == State.DATA:\n+        elif isinstance(event, Data) or self.state == State.DATA:",
+      "pytest_files": [
+        "tests/sansio/test_multipart.py"
+      ],
+      "sha256": "f4dd09c29af37493b710b8e3f28fe6518e0fbea3f1a184e1d8b8bfa29f50cab6"
+    },
+    {
+      "mod_id": "mod_183",
+      "pair_id": "V2P054",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "to_header",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/auth.py",
+      "import_name": "werkzeug.datastructures.auth",
+      "nlines": 460,
+      "mutation_lineno": 437,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if self.type == \"digest\":\n+        if self.type != \"digest\":",
+      "pytest_files": [
+        "tests/test_exceptions.py",
+        "tests/test_http.py"
+      ],
+      "sha256": "f3105c1e077721126f89169dfb61c4237dd1afa19c5ac4808abc00b110c6d898"
+    },
+    {
+      "mod_id": "mod_184",
+      "pair_id": "V2P063",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "enclosing_tokens",
+      "repo": "packaging",
+      "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+      "rel_in_src": "packaging/_tokenizer.py",
+      "import_name": "packaging._tokenizer",
+      "nlines": 236,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_tokenizer.py"
+      ],
+      "sha256": "1ea5969cd5c384eec29e77f21a8f11115ae87411bdb64d3c158bcde7a67936d2"
+    },
+    {
+      "mod_id": "mod_185",
+      "pair_id": "V2P038",
+      "label": "BUG",
+      "category": "arithmetic_sign",
+      "target_function": "position_cursor",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/live_render.py",
+      "import_name": "rich.live_render",
+      "nlines": 117,
+      "mutation_lineno": 67,
+      "mutation": "- -> +",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-                    * (height - 1)\n+                    * (height + 1)",
+      "pytest_files": [
+        "tests/test_live_render.py"
+      ],
+      "sha256": "76a4ff2c830762bf30a4bc0943034f90a935da74f1cacbca68f31c1de5d5ea91"
+    },
+    {
+      "mod_id": "mod_186",
+      "pair_id": "V2P027",
+      "label": "BUG",
+      "category": "order_boundary",
+      "target_function": "best_match",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/accept.py",
+      "import_name": "werkzeug.datastructures.accept",
+      "nlines": 425,
+      "mutation_lineno": 226,
+      "mutation": "> -> >=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-            if q > best_quality or specificity > best_specificity:\n+            if q >= best_quality or specificity > best_specificity:",
+      "pytest_files": [
+        "tests/test_apply_range.py",
+        "tests/test_datastructures.py"
+      ],
+      "sha256": "28540050ec8abe1f02474fd38ce2a4168a01c867e2e8fd14507b9b037e49646b"
+    },
+    {
+      "mod_id": "mod_187",
+      "pair_id": "V2P010",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "blend_rgb",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/color.py",
+      "import_name": "rich.color",
+      "nlines": 622,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_color.py",
+        "tests/test_color_triplet.py"
+      ],
+      "sha256": "a4c67c926ab53ee8bc4f86954c40643da6b2a617856de7db300c0ad307ce7d15"
+    },
+    {
+      "mod_id": "mod_188",
+      "pair_id": "V2P003",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "index",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/listutils.py",
+      "import_name": "boltons.listutils",
+      "nlines": 431,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_listutils.py"
+      ],
+      "sha256": "5910aa1fac62a85be6acbfdfce6d2c581cda7e0d17ea1028c55df655f4385311"
+    },
+    {
+      "mod_id": "mod_189",
+      "pair_id": "V2P062",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "add",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/tree.py",
+      "import_name": "rich.tree",
+      "nlines": 256,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_tree.py"
+      ],
+      "sha256": "650b3e05e45c4e03117fbe160e02a62d7638d080e9ffa14ffc444e07337f11f3"
+    },
+    {
+      "mod_id": "mod_190",
+      "pair_id": "V2P026",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "ceil",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/mathutils.py",
+      "import_name": "boltons.mathutils",
+      "nlines": 260,
+      "mutation_lineno": 92,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if i == len(options):\n+    if i != len(options):",
+      "pytest_files": [
+        "tests/test_mathutils.py"
+      ],
+      "sha256": "1cfab6db3b9835776f8c7838253e289aec7b2d603123edab9b88710e209b8971"
+    },
+    {
+      "mod_id": "mod_191",
+      "pair_id": "V2P041",
+      "label": "CLEAN",
+      "category": "arithmetic_sign",
+      "target_function": "_rule_line",
+      "repo": "rich",
+      "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+      "rel_in_src": "rich/rule.py",
+      "import_name": "rich.rule",
+      "nlines": 129,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_rule.py",
+        "tests/test_rule_in_table.py"
+      ],
+      "sha256": "6de035fcc9bb196db26a3c76717431eb8a17449dba1786d49ac9d1bd4198f845"
+    },
+    {
+      "mod_id": "mod_192",
+      "pair_id": "V2P100",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "get_all",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/gcutils.py",
+      "import_name": "boltons.gcutils",
+      "nlines": 190,
+      "mutation_lineno": 120,
+      "mutation": "is -> is not",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        ret = [x for x in to_check if type(x) is type_obj]\n+        ret = [x for x in to_check if type(x) is not type_obj]",
+      "pytest_files": [
+        "tests/test_gcutils.py"
+      ],
+      "sha256": "1ac2370f8d2ba57a23fa9e5192da3d808a4e5c05dd962747eb67d609ea2a5d6e"
+    },
+    {
+      "mod_id": "mod_193",
+      "pair_id": "V2P049",
+      "label": "CLEAN",
+      "category": "boolean_logic",
+      "target_function": "show_help",
+      "repo": "click",
+      "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+      "rel_in_src": "click/decorators.py",
+      "import_name": "click.decorators",
+      "nlines": 622,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_command_decorators.py"
+      ],
+      "sha256": "c3865cc1542712a9184b6adf1b2511c9741e8200a349ce3383a3573d4e889894"
+    },
+    {
+      "mod_id": "mod_194",
+      "pair_id": "V2P018",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "_get_value",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/datastructures/csp.py",
+      "import_name": "werkzeug.datastructures.csp",
+      "nlines": 177,
+      "mutation_lineno": 83,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if deprecated is not None:\n+        if deprecated is None:",
+      "pytest_files": [
+        "tests/test_datastructures.py",
+        "tests/test_http.py"
+      ],
+      "sha256": "32c33ab71d98d3b56f3e75b6aa01a7010397da3616d0d50f9856f4e600d7849e"
+    },
+    {
+      "mod_id": "mod_195",
+      "pair_id": "V2P080",
+      "label": "CLEAN",
+      "category": "order_boundary",
+      "target_function": "generate_password_hash",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/security.py",
+      "import_name": "werkzeug.security",
+      "nlines": 218,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_security.py"
+      ],
+      "sha256": "b07f764ebab6b0632b7404e8b721e17b074d08b4376bf55d0c001750fa4ae9ab"
+    },
+    {
+      "mod_id": "mod_196",
+      "pair_id": "V2P073",
+      "label": "CLEAN",
+      "category": "equality_flip",
+      "target_function": "_escape_shell_args",
+      "repo": "boltons",
+      "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+      "rel_in_src": "boltons/ecoutils.py",
+      "import_name": "boltons.ecoutils",
+      "nlines": 480,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_ecoutils.py"
+      ],
+      "sha256": "34589ae1d7c9d8c5faacd7a0ba6f2fdf9afad71ac2020e5eff267b663c145d9e"
+    },
+    {
+      "mod_id": "mod_197",
+      "pair_id": "V2P032",
+      "label": "BUG",
+      "category": "identity_membership",
+      "target_function": "uri_to_iri",
+      "repo": "werkzeug",
+      "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+      "rel_in_src": "werkzeug/urls.py",
+      "import_name": "werkzeug.urls",
+      "nlines": 210,
+      "mutation_lineno": 101,
+      "mutation": "is not -> is",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-    if parts.port is not None:\n+    if parts.port is None:",
+      "pytest_files": [
+        "tests/test_urls.py"
+      ],
+      "sha256": "8679d0ac7bb2c5fbfe6420840172b9c6f9c94747aad9e4e1ec21d454ce4ae250"
+    },
+    {
+      "mod_id": "mod_198",
+      "pair_id": "V2P066",
+      "label": "BUG",
+      "category": "equality_flip",
+      "target_function": "_pluralize",
+      "repo": "jmespath",
+      "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+      "rel_in_src": "jmespath/exceptions.py",
+      "import_name": "jmespath.exceptions",
+      "nlines": 123,
+      "mutation_lineno": 82,
+      "mutation": "== -> !=",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if count == 1:\n+        if count != 1:",
+      "pytest_files": [
+        "tests/test_functions.py",
+        "tests/test_lexer.py"
+      ],
+      "sha256": "261e8825d8203236e853364c6afa63650a3f2f03c042a69b0784fb21eec64a5e"
+    },
+    {
+      "mod_id": "mod_199",
+      "pair_id": "V2P037",
+      "label": "CLEAN",
+      "category": "identity_membership",
+      "target_function": "cmd_bump",
+      "repo": "semver",
+      "commit": "a4b7d337b1eb699ad4bad532a4b3fc68f8ec2408",
+      "rel_in_src": "semver/cli.py",
+      "import_name": "semver.cli",
+      "nlines": 175,
+      "mutation_lineno": null,
+      "mutation": null,
+      "diff": null,
+      "pytest_files": [
+        "tests/test_pysemver-cli.py"
+      ],
+      "sha256": "93c89b474678c06600bac3c51fcacd6475938dbb6d6a54d5dbee6157d0dbd2b0"
+    },
+    {
+      "mod_id": "mod_200",
+      "pair_id": "V2P040",
+      "label": "BUG",
+      "category": "boolean_logic",
+      "target_function": "isoparse",
+      "repo": "dateutil",
+      "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+      "rel_in_src": "dateutil/parser/isoparser.py",
+      "import_name": "dateutil.parser.isoparser",
+      "nlines": 427,
+      "mutation_lineno": 140,
+      "mutation": "and -> or",
+      "diff": "--- clean\n+++ buggy\n@@ -1 +1 @@\n-        if len(components) > 3 and components[3] == 24:\n+        if len(components) > 3 or components[3] == 24:",
+      "pytest_files": [
+        "tests/test_isoparser.py"
+      ],
+      "sha256": "128c4dcefc384b793995a23ea75791ea1e427a74910dbe38e35c61b9eaea06c2"
+    }
+  ]
+}

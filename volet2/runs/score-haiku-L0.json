@@ -1,0 +1,1215 @@
+{
+  "arms": {
+    "haiku-v2-L0": {
+      "n_pairs": 100,
+      "missing_mods": 0,
+      "parse_failures": 1,
+      "strict_tpr": {
+        "k": 81,
+        "n": 100,
+        "rate": 0.81,
+        "wilson_95": [
+          0.7222,
+          0.8749
+        ],
+        "bootstrap_95": [
+          0.73,
+          0.89
+        ]
+      },
+      "verdict_tpr": {
+        "k": 96,
+        "n": 100,
+        "rate": 0.96,
+        "wilson_95": [
+          0.9016,
+          0.9843
+        ],
+        "bootstrap_95": [
+          0.92,
+          0.99
+        ]
+      },
+      "fpr": {
+        "k": 80,
+        "n": 100,
+        "rate": 0.8,
+        "wilson_95": [
+          0.7112,
+          0.8666
+        ],
+        "bootstrap_95": [
+          0.72,
+          0.88
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 14,
+        "n": 100,
+        "rate": 0.14,
+        "wilson_95": [
+          0.0853,
+          0.2214
+        ],
+        "bootstrap_95": [
+          0.07,
+          0.21
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 15,
+        "n": 100,
+        "rate": 0.15,
+        "wilson_95": [
+          0.0931,
+          0.2328
+        ],
+        "bootstrap_95": [
+          0.08,
+          0.22
+        ]
+      },
+      "balanced_accuracy": 0.58,
+      "per_category": {
+        "equality_flip": {
+          "n": 21,
+          "strict_tp": 21,
+          "verdict_tp": 21,
+          "fp": 18,
+          "strict_sep": 3
+        },
+        "identity_membership": {
+          "n": 21,
+          "strict_tp": 18,
+          "verdict_tp": 20,
+          "fp": 15,
+          "strict_sep": 3
+        },
+        "arithmetic_sign": {
+          "n": 20,
+          "strict_tp": 15,
+          "verdict_tp": 19,
+          "fp": 15,
+          "strict_sep": 4
+        },
+        "boolean_logic": {
+          "n": 20,
+          "strict_tp": 13,
+          "verdict_tp": 19,
+          "fp": 17,
+          "strict_sep": 2
+        },
+        "order_boundary": {
+          "n": 18,
+          "strict_tp": 14,
+          "verdict_tp": 17,
+          "fp": 15,
+          "strict_sep": 2
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "V2P001",
+          "category": "equality_flip",
+          "target_function": "_get_version",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_get_version",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P002",
+          "category": "identity_membership",
+          "target_function": "add",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "add",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P003",
+          "category": "arithmetic_sign",
+          "target_function": "index",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "index",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P004",
+          "category": "boolean_logic",
+          "target_function": "represent_object",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "ignore_aliases",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P005",
+          "category": "identity_membership",
+          "target_function": "_plain_int",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_plain_int",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P006",
+          "category": "order_boundary",
+          "target_function": "_get_real_value",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_get_real_value",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P007",
+          "category": "equality_flip",
+          "target_function": "is_complete_text",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_complete_text",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P008",
+          "category": "boolean_logic",
+          "target_function": "_get_signature",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "__init__",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P009",
+          "category": "identity_membership",
+          "target_function": "set_value",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "set_value",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P010",
+          "category": "arithmetic_sign",
+          "target_function": "blend_rgb",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "blend_rgb",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P011",
+          "category": "order_boundary",
+          "target_function": "justify",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "justify",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P012",
+          "category": "equality_flip",
+          "target_function": "process_response",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "process_response",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P013",
+          "category": "arithmetic_sign",
+          "target_function": "normalized",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "__add__",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P014",
+          "category": "boolean_logic",
+          "target_function": "send_event",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_parse_data",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P015",
+          "category": "order_boundary",
+          "target_function": "_to_str",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_to_str",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P016",
+          "category": "arithmetic_sign",
+          "target_function": "write",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "write",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P017",
+          "category": "identity_membership",
+          "target_function": "_ensure_tuple",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P018",
+          "category": "identity_membership",
+          "target_function": "_get_value",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_get_value",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P019",
+          "category": "boolean_logic",
+          "target_function": "compose_scalar_node",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "compose_scalar_node",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P020",
+          "category": "order_boundary",
+          "target_function": "_normalize_group_names",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_normalize_group_names",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P021",
+          "category": "arithmetic_sign",
+          "target_function": "divide_line",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "divide_line",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P022",
+          "category": "identity_membership",
+          "target_function": "clamp",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "clamp",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P023",
+          "category": "boolean_logic",
+          "target_function": "collect",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "collect",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P024",
+          "category": "identity_membership",
+          "target_function": "update",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "update",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P025",
+          "category": "equality_flip",
+          "target_function": "wrap_trace",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "wrap_trace",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P026",
+          "category": "equality_flip",
+          "target_function": "ceil",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "ceil",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P027",
+          "category": "order_boundary",
+          "target_function": "best_match",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "best_match",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P028",
+          "category": "boolean_logic",
+          "target_function": "from_pyfile",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "from_prefixed_env",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P029",
+          "category": "equality_flip",
+          "target_function": "store_error",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "store_error",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P030",
+          "category": "order_boundary",
+          "target_function": "seek",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "seek",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P031",
+          "category": "equality_flip",
+          "target_function": "_validate_arguments",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_validate_arguments",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P032",
+          "category": "identity_membership",
+          "target_function": "uri_to_iri",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "uri_to_iri",
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P033",
+          "category": "arithmetic_sign",
+          "target_function": "_match_or_else",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_match_or_else",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P034",
+          "category": "arithmetic_sign",
+          "target_function": "from_header",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P035",
+          "category": "identity_membership",
+          "target_function": "loader",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_package_loader",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P036",
+          "category": "order_boundary",
+          "target_function": "test_var",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "test_var",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P037",
+          "category": "identity_membership",
+          "target_function": "cmd_bump",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "cmd_bump",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P038",
+          "category": "arithmetic_sign",
+          "target_function": "position_cursor",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "position_cursor",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P039",
+          "category": "boolean_logic",
+          "target_function": "default_if_none",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "default_if_none",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P040",
+          "category": "boolean_logic",
+          "target_function": "isoparse",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_parse_isotime",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P041",
+          "category": "arithmetic_sign",
+          "target_function": "_rule_line",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_rule_line",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P042",
+          "category": "identity_membership",
+          "target_function": "resolve_color_default",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "resolve_color_default",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P043",
+          "category": "boolean_logic",
+          "target_function": "reconstruct",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "reconstruct",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P044",
+          "category": "equality_flip",
+          "target_function": "derive_key",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "derive_key",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P045",
+          "category": "order_boundary",
+          "target_function": "_parse",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_parse",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P046",
+          "category": "equality_flip",
+          "target_function": "pop_theme",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "pop_theme",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P047",
+          "category": "arithmetic_sign",
+          "target_function": "_get_pulse_segments",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "__rich_console__",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P048",
+          "category": "order_boundary",
+          "target_function": "handle_NL",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "handle_NL",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P049",
+          "category": "boolean_logic",
+          "target_function": "show_help",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "show_help",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P050",
+          "category": "equality_flip",
+          "target_function": "easter",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "easter",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P051",
+          "category": "equality_flip",
+          "target_function": "get_row",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_row",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P052",
+          "category": "order_boundary",
+          "target_function": "highlight",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "highlight",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P053",
+          "category": "arithmetic_sign",
+          "target_function": "from_header",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "from_header",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P054",
+          "category": "equality_flip",
+          "target_function": "to_header",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "to_header",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P055",
+          "category": "boolean_logic",
+          "target_function": "_is_false",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_is_false",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P056",
+          "category": "identity_membership",
+          "target_function": "is_gen",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_lazy_is_generator",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P057",
+          "category": "order_boundary",
+          "target_function": "write_dl",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P058",
+          "category": "arithmetic_sign",
+          "target_function": "get_context",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_context",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P059",
+          "category": "identity_membership",
+          "target_function": "render",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "render",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P060",
+          "category": "boolean_logic",
+          "target_function": "wrapper",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "deprecated",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P061",
+          "category": "identity_membership",
+          "target_function": "get_all_subclasses",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_all_subclasses",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P062",
+          "category": "identity_membership",
+          "target_function": "add",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "add",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P063",
+          "category": "equality_flip",
+          "target_function": "enclosing_tokens",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "enclosing_tokens",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P064",
+          "category": "boolean_logic",
+          "target_function": "rich_cast",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "rich_cast",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P065",
+          "category": "identity_membership",
+          "target_function": "_guess_filename",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_guess_filename",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P066",
+          "category": "equality_flip",
+          "target_function": "_pluralize",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_pluralize",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P067",
+          "category": "boolean_logic",
+          "target_function": "auto_repr",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "auto_repr",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P068",
+          "category": "order_boundary",
+          "target_function": "_cell_len",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_cell_len",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P069",
+          "category": "boolean_logic",
+          "target_function": "to_dict",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "to_dict",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P070",
+          "category": "equality_flip",
+          "target_function": "parse",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "parse",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P071",
+          "category": "arithmetic_sign",
+          "target_function": "align_text",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "align_text",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P072",
+          "category": "equality_flip",
+          "target_function": "generate_segments",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "generate_segments",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P073",
+          "category": "equality_flip",
+          "target_function": "_escape_shell_args",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_escape_shell_args",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P074",
+          "category": "order_boundary",
+          "target_function": "to_url",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "to_url",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P075",
+          "category": "arithmetic_sign",
+          "target_function": "_ansi_tokenize",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_ansi_tokenize",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P076",
+          "category": "arithmetic_sign",
+          "target_function": "shrinkuser",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "shrinkuser",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P077",
+          "category": "identity_membership",
+          "target_function": "exclude_",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "exclude_",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P078",
+          "category": "boolean_logic",
+          "target_function": "parse_node",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P079",
+          "category": "identity_membership",
+          "target_function": "render",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "render",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P080",
+          "category": "order_boundary",
+          "target_function": "generate_password_hash",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "generate_password_hash",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P081",
+          "category": "boolean_logic",
+          "target_function": "stop",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "stop",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P082",
+          "category": "identity_membership",
+          "target_function": "cmp_using",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "cmp_using",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P083",
+          "category": "boolean_logic",
+          "target_function": "_set_directive",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_set_directive",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P084",
+          "category": "boolean_logic",
+          "target_function": "_join_param_hints",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_join_param_hints",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P085",
+          "category": "order_boundary",
+          "target_function": "strip_docstrings",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "gen_standalone",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P086",
+          "category": "equality_flip",
+          "target_function": "get",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P087",
+          "category": "arithmetic_sign",
+          "target_function": "legacy_windows_render",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "legacy_windows_render",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P088",
+          "category": "identity_membership",
+          "target_function": "_loads_unsafe_impl",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_loads_unsafe_impl",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "V2P089",
+          "category": "arithmetic_sign",
+          "target_function": "expand_kids_by_data",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "expand_kids_by_data",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P090",
+          "category": "arithmetic_sign",
+          "target_function": "ratio_reduce",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "ratio_distribute",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P091",
+          "category": "equality_flip",
+          "target_function": "namedlist",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "namedlist",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P092",
+          "category": "boolean_logic",
+          "target_function": "_get_message",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_get_message",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P093",
+          "category": "arithmetic_sign",
+          "target_function": "parse_wheel_filename",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "canonicalize_version",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P094",
+          "category": "equality_flip",
+          "target_function": "close",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "close",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P095",
+          "category": "arithmetic_sign",
+          "target_function": "iter_renderables",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "iter_renderables",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P096",
+          "category": "order_boundary",
+          "target_function": "_term",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_parse",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P097",
+          "category": "order_boundary",
+          "target_function": "get_format_args",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_format_args",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P098",
+          "category": "order_boundary",
+          "target_function": "from_data",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "_add_vertical_html_lines",
+          "clean_verdict": "BUG",
+          "strict_tp": 0,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P099",
+          "category": "equality_flip",
+          "target_function": "untag",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "untag",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "V2P100",
+          "category": "identity_membership",
+          "target_function": "get_all",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_all",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        }
+      ]
+    }
+  },
+  "comparisons": {}
+}

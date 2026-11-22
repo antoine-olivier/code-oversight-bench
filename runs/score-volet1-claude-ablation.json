@@ -1,0 +1,3318 @@
+{
+  "arms": {
+    "haiku-L0": {
+      "n_pairs": 30,
+      "missing_mods": 0,
+      "parse_failures": 2,
+      "strict_tpr": {
+        "k": 28,
+        "n": 30,
+        "rate": 0.9333,
+        "wilson_95": [
+          0.7868,
+          0.9815
+        ],
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ]
+      },
+      "verdict_tpr": {
+        "k": 28,
+        "n": 30,
+        "rate": 0.9333,
+        "wilson_95": [
+          0.7868,
+          0.9815
+        ],
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ]
+      },
+      "fpr": {
+        "k": 11,
+        "n": 30,
+        "rate": 0.3667,
+        "wilson_95": [
+          0.2187,
+          0.5449
+        ],
+        "bootstrap_95": [
+          0.2,
+          0.5333
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 17,
+        "n": 30,
+        "rate": 0.5667,
+        "wilson_95": [
+          0.392,
+          0.7262
+        ],
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 17,
+        "n": 30,
+        "rate": 0.5667,
+        "wilson_95": [
+          0.392,
+          0.7262
+        ],
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ]
+      },
+      "balanced_accuracy": 0.7833,
+      "per_category": {
+        "guard_access": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 2,
+          "strict_sep": 3
+        },
+        "stats_eval": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 2,
+          "strict_sep": 3
+        },
+        "numeric_math": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 3,
+          "strict_sep": 2
+        },
+        "state_cache": {
+          "n": 5,
+          "strict_tp": 4,
+          "verdict_tp": 4,
+          "fp": 1,
+          "strict_sep": 3
+        },
+        "parsing_bounds": {
+          "n": 5,
+          "strict_tp": 4,
+          "verdict_tp": 4,
+          "fp": 1,
+          "strict_sep": 3
+        },
+        "security_integrity": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 2,
+          "strict_sep": 3
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "P01",
+          "category": "guard_access",
+          "target_function": "is_inside_workspace",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_inside_workspace",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P02",
+          "category": "guard_access",
+          "target_function": "is_readonly_git_command",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_readonly_git_command",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P03",
+          "category": "guard_access",
+          "target_function": "evaluate_access",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "evaluate_access",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P04",
+          "category": "guard_access",
+          "target_function": "is_protected_target",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_protected_target",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P05",
+          "category": "guard_access",
+          "target_function": "authorize_scopes",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "authorize_scopes",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P06",
+          "category": "stats_eval",
+          "target_function": "standardize_split",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "standardize_split",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P07",
+          "category": "stats_eval",
+          "target_function": "catch_rate_at_fpr",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "catch_rate_at_fpr",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P08",
+          "category": "stats_eval",
+          "target_function": "cluster_bootstrap_ci",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "cluster_bootstrap_ci",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P09",
+          "category": "stats_eval",
+          "target_function": "weighted_mean",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "weighted_mean",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P10",
+          "category": "stats_eval",
+          "target_function": "overall_accuracy",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "overall_accuracy",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P11",
+          "category": "numeric_math",
+          "target_function": "verify_max_cosine",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "verify_max_cosine",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P12",
+          "category": "numeric_math",
+          "target_function": "mul_interval",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "mul_interval",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P13",
+          "category": "numeric_math",
+          "target_function": "project_tangent",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "project_tangent",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P14",
+          "category": "numeric_math",
+          "target_function": "logsumexp",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "logsumexp",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P15",
+          "category": "numeric_math",
+          "target_function": "matmul",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "matmul",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P16",
+          "category": "state_cache",
+          "target_function": "append_audit_event",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "append_audit_event",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P17",
+          "category": "state_cache",
+          "target_function": "get_score",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_score",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P18",
+          "category": "state_cache",
+          "target_function": "with_extra_denies",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "with_extra_denies",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P19",
+          "category": "state_cache",
+          "target_function": "put",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P20",
+          "category": "state_cache",
+          "target_function": "save_checkpoint",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "save_checkpoint",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P21",
+          "category": "parsing_bounds",
+          "target_function": "parse_csv_rows",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "parse_csv_rows",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P22",
+          "category": "parsing_bounds",
+          "target_function": "load_jsonl",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "load_jsonl",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P23",
+          "category": "parsing_bounds",
+          "target_function": "extract_window",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "extract_window",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P24",
+          "category": "parsing_bounds",
+          "target_function": "binary_search_index",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "binary_search_index",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P25",
+          "category": "parsing_bounds",
+          "target_function": "is_before_deadline",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P26",
+          "category": "security_integrity",
+          "target_function": "verify_manifest",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "verify_manifest",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P27",
+          "category": "security_integrity",
+          "target_function": "verify_signature",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "verify_signature",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P28",
+          "category": "security_integrity",
+          "target_function": "validate_record",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "validate_record",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P29",
+          "category": "security_integrity",
+          "target_function": "allow_request",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "allow_request",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P30",
+          "category": "security_integrity",
+          "target_function": "redact_secrets",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "redact_secrets",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        }
+      ]
+    },
+    "haiku-L1": {
+      "n_pairs": 30,
+      "missing_mods": 0,
+      "parse_failures": 39,
+      "strict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "fpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "balanced_accuracy": 0.5,
+      "per_category": {
+        "guard_access": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "stats_eval": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "numeric_math": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "state_cache": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "parsing_bounds": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "security_integrity": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "P01",
+          "category": "guard_access",
+          "target_function": "is_inside_workspace",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P02",
+          "category": "guard_access",
+          "target_function": "is_readonly_git_command",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P03",
+          "category": "guard_access",
+          "target_function": "evaluate_access",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P04",
+          "category": "guard_access",
+          "target_function": "is_protected_target",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P05",
+          "category": "guard_access",
+          "target_function": "authorize_scopes",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P06",
+          "category": "stats_eval",
+          "target_function": "standardize_split",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P07",
+          "category": "stats_eval",
+          "target_function": "catch_rate_at_fpr",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P08",
+          "category": "stats_eval",
+          "target_function": "cluster_bootstrap_ci",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P09",
+          "category": "stats_eval",
+          "target_function": "weighted_mean",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P10",
+          "category": "stats_eval",
+          "target_function": "overall_accuracy",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P11",
+          "category": "numeric_math",
+          "target_function": "verify_max_cosine",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P12",
+          "category": "numeric_math",
+          "target_function": "mul_interval",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P13",
+          "category": "numeric_math",
+          "target_function": "project_tangent",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P14",
+          "category": "numeric_math",
+          "target_function": "logsumexp",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P15",
+          "category": "numeric_math",
+          "target_function": "matmul",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P16",
+          "category": "state_cache",
+          "target_function": "append_audit_event",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P17",
+          "category": "state_cache",
+          "target_function": "get_score",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P18",
+          "category": "state_cache",
+          "target_function": "with_extra_denies",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P19",
+          "category": "state_cache",
+          "target_function": "put",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P20",
+          "category": "state_cache",
+          "target_function": "save_checkpoint",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P21",
+          "category": "parsing_bounds",
+          "target_function": "parse_csv_rows",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P22",
+          "category": "parsing_bounds",
+          "target_function": "load_jsonl",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P23",
+          "category": "parsing_bounds",
+          "target_function": "extract_window",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P24",
+          "category": "parsing_bounds",
+          "target_function": "binary_search_index",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P25",
+          "category": "parsing_bounds",
+          "target_function": "is_before_deadline",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P26",
+          "category": "security_integrity",
+          "target_function": "verify_manifest",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P27",
+          "category": "security_integrity",
+          "target_function": "verify_signature",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P28",
+          "category": "security_integrity",
+          "target_function": "validate_record",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P29",
+          "category": "security_integrity",
+          "target_function": "allow_request",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P30",
+          "category": "security_integrity",
+          "target_function": "redact_secrets",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      ]
+    },
+    "haiku-L2": {
+      "n_pairs": 30,
+      "missing_mods": 0,
+      "parse_failures": 39,
+      "strict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "fpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "balanced_accuracy": 0.5,
+      "per_category": {
+        "guard_access": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "stats_eval": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "numeric_math": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "state_cache": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "parsing_bounds": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "security_integrity": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "P01",
+          "category": "guard_access",
+          "target_function": "is_inside_workspace",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P02",
+          "category": "guard_access",
+          "target_function": "is_readonly_git_command",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P03",
+          "category": "guard_access",
+          "target_function": "evaluate_access",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P04",
+          "category": "guard_access",
+          "target_function": "is_protected_target",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P05",
+          "category": "guard_access",
+          "target_function": "authorize_scopes",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P06",
+          "category": "stats_eval",
+          "target_function": "standardize_split",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P07",
+          "category": "stats_eval",
+          "target_function": "catch_rate_at_fpr",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P08",
+          "category": "stats_eval",
+          "target_function": "cluster_bootstrap_ci",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P09",
+          "category": "stats_eval",
+          "target_function": "weighted_mean",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P10",
+          "category": "stats_eval",
+          "target_function": "overall_accuracy",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P11",
+          "category": "numeric_math",
+          "target_function": "verify_max_cosine",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P12",
+          "category": "numeric_math",
+          "target_function": "mul_interval",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P13",
+          "category": "numeric_math",
+          "target_function": "project_tangent",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P14",
+          "category": "numeric_math",
+          "target_function": "logsumexp",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P15",
+          "category": "numeric_math",
+          "target_function": "matmul",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P16",
+          "category": "state_cache",
+          "target_function": "append_audit_event",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P17",
+          "category": "state_cache",
+          "target_function": "get_score",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P18",
+          "category": "state_cache",
+          "target_function": "with_extra_denies",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P19",
+          "category": "state_cache",
+          "target_function": "put",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P20",
+          "category": "state_cache",
+          "target_function": "save_checkpoint",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P21",
+          "category": "parsing_bounds",
+          "target_function": "parse_csv_rows",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P22",
+          "category": "parsing_bounds",
+          "target_function": "load_jsonl",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P23",
+          "category": "parsing_bounds",
+          "target_function": "extract_window",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P24",
+          "category": "parsing_bounds",
+          "target_function": "binary_search_index",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P25",
+          "category": "parsing_bounds",
+          "target_function": "is_before_deadline",
+          "buggy_verdict": "CLEAN",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P26",
+          "category": "security_integrity",
+          "target_function": "verify_manifest",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P27",
+          "category": "security_integrity",
+          "target_function": "verify_signature",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P28",
+          "category": "security_integrity",
+          "target_function": "validate_record",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P29",
+          "category": "security_integrity",
+          "target_function": "allow_request",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P30",
+          "category": "security_integrity",
+          "target_function": "redact_secrets",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      ]
+    },
+    "sonnet-L0": {
+      "n_pairs": 30,
+      "missing_mods": 0,
+      "parse_failures": 0,
+      "strict_tpr": {
+        "k": 30,
+        "n": 30,
+        "rate": 1.0,
+        "wilson_95": [
+          0.8865,
+          1.0
+        ],
+        "bootstrap_95": [
+          1.0,
+          1.0
+        ]
+      },
+      "verdict_tpr": {
+        "k": 30,
+        "n": 30,
+        "rate": 1.0,
+        "wilson_95": [
+          0.8865,
+          1.0
+        ],
+        "bootstrap_95": [
+          1.0,
+          1.0
+        ]
+      },
+      "fpr": {
+        "k": 4,
+        "n": 30,
+        "rate": 0.1333,
+        "wilson_95": [
+          0.0531,
+          0.2968
+        ],
+        "bootstrap_95": [
+          0.0333,
+          0.2667
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 26,
+        "n": 30,
+        "rate": 0.8667,
+        "wilson_95": [
+          0.7032,
+          0.9469
+        ],
+        "bootstrap_95": [
+          0.7333,
+          0.9667
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 26,
+        "n": 30,
+        "rate": 0.8667,
+        "wilson_95": [
+          0.7032,
+          0.9469
+        ],
+        "bootstrap_95": [
+          0.7333,
+          0.9667
+        ]
+      },
+      "balanced_accuracy": 0.9333,
+      "per_category": {
+        "guard_access": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 3,
+          "strict_sep": 2
+        },
+        "stats_eval": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 0,
+          "strict_sep": 5
+        },
+        "numeric_math": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 0,
+          "strict_sep": 5
+        },
+        "state_cache": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 0,
+          "strict_sep": 5
+        },
+        "parsing_bounds": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 1,
+          "strict_sep": 4
+        },
+        "security_integrity": {
+          "n": 5,
+          "strict_tp": 5,
+          "verdict_tp": 5,
+          "fp": 0,
+          "strict_sep": 5
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "P01",
+          "category": "guard_access",
+          "target_function": "is_inside_workspace",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_inside_workspace",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P02",
+          "category": "guard_access",
+          "target_function": "is_readonly_git_command",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_readonly_git_command",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P03",
+          "category": "guard_access",
+          "target_function": "evaluate_access",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "evaluate_access",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P04",
+          "category": "guard_access",
+          "target_function": "is_protected_target",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_protected_target",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P05",
+          "category": "guard_access",
+          "target_function": "authorize_scopes",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "authorize_scopes",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P06",
+          "category": "stats_eval",
+          "target_function": "standardize_split",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "standardize_split",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P07",
+          "category": "stats_eval",
+          "target_function": "catch_rate_at_fpr",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "catch_rate_at_fpr",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P08",
+          "category": "stats_eval",
+          "target_function": "cluster_bootstrap_ci",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "cluster_bootstrap_ci",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P09",
+          "category": "stats_eval",
+          "target_function": "weighted_mean",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "weighted_mean",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P10",
+          "category": "stats_eval",
+          "target_function": "overall_accuracy",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "overall_accuracy",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P11",
+          "category": "numeric_math",
+          "target_function": "verify_max_cosine",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "verify_max_cosine",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P12",
+          "category": "numeric_math",
+          "target_function": "mul_interval",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "mul_interval",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P13",
+          "category": "numeric_math",
+          "target_function": "project_tangent",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "project_tangent",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P14",
+          "category": "numeric_math",
+          "target_function": "logsumexp",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "logsumexp",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P15",
+          "category": "numeric_math",
+          "target_function": "matmul",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "matmul",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P16",
+          "category": "state_cache",
+          "target_function": "append_audit_event",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "append_audit_event",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P17",
+          "category": "state_cache",
+          "target_function": "get_score",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "get_score",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P18",
+          "category": "state_cache",
+          "target_function": "with_extra_denies",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "with_extra_denies",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P19",
+          "category": "state_cache",
+          "target_function": "put",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "put",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P20",
+          "category": "state_cache",
+          "target_function": "save_checkpoint",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "save_checkpoint",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P21",
+          "category": "parsing_bounds",
+          "target_function": "parse_csv_rows",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "parse_csv_rows",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P22",
+          "category": "parsing_bounds",
+          "target_function": "load_jsonl",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "load_jsonl",
+          "clean_verdict": "BUG",
+          "strict_tp": 1,
+          "fp": 1,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P23",
+          "category": "parsing_bounds",
+          "target_function": "extract_window",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "extract_window",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P24",
+          "category": "parsing_bounds",
+          "target_function": "binary_search_index",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "binary_search_index",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P25",
+          "category": "parsing_bounds",
+          "target_function": "is_before_deadline",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "is_before_deadline",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P26",
+          "category": "security_integrity",
+          "target_function": "verify_manifest",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "verify_manifest",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P27",
+          "category": "security_integrity",
+          "target_function": "verify_signature",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "verify_signature",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P28",
+          "category": "security_integrity",
+          "target_function": "validate_record",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "validate_record",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P29",
+          "category": "security_integrity",
+          "target_function": "allow_request",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "allow_request",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        },
+        {
+          "pair_id": "P30",
+          "category": "security_integrity",
+          "target_function": "redact_secrets",
+          "buggy_verdict": "BUG",
+          "buggy_fn": "redact_secrets",
+          "clean_verdict": "CLEAN",
+          "strict_tp": 1,
+          "fp": 0,
+          "strict_sep": 1
+        }
+      ]
+    },
+    "sonnet-L1": {
+      "n_pairs": 30,
+      "missing_mods": 0,
+      "parse_failures": 34,
+      "strict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "fpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "balanced_accuracy": 0.5,
+      "per_category": {
+        "guard_access": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "stats_eval": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "numeric_math": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "state_cache": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "parsing_bounds": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "security_integrity": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "P01",
+          "category": "guard_access",
+          "target_function": "is_inside_workspace",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P02",
+          "category": "guard_access",
+          "target_function": "is_readonly_git_command",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P03",
+          "category": "guard_access",
+          "target_function": "evaluate_access",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P04",
+          "category": "guard_access",
+          "target_function": "is_protected_target",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P05",
+          "category": "guard_access",
+          "target_function": "authorize_scopes",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P06",
+          "category": "stats_eval",
+          "target_function": "standardize_split",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P07",
+          "category": "stats_eval",
+          "target_function": "catch_rate_at_fpr",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P08",
+          "category": "stats_eval",
+          "target_function": "cluster_bootstrap_ci",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P09",
+          "category": "stats_eval",
+          "target_function": "weighted_mean",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P10",
+          "category": "stats_eval",
+          "target_function": "overall_accuracy",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P11",
+          "category": "numeric_math",
+          "target_function": "verify_max_cosine",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P12",
+          "category": "numeric_math",
+          "target_function": "mul_interval",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P13",
+          "category": "numeric_math",
+          "target_function": "project_tangent",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P14",
+          "category": "numeric_math",
+          "target_function": "logsumexp",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P15",
+          "category": "numeric_math",
+          "target_function": "matmul",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P16",
+          "category": "state_cache",
+          "target_function": "append_audit_event",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P17",
+          "category": "state_cache",
+          "target_function": "get_score",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P18",
+          "category": "state_cache",
+          "target_function": "with_extra_denies",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P19",
+          "category": "state_cache",
+          "target_function": "put",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P20",
+          "category": "state_cache",
+          "target_function": "save_checkpoint",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P21",
+          "category": "parsing_bounds",
+          "target_function": "parse_csv_rows",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P22",
+          "category": "parsing_bounds",
+          "target_function": "load_jsonl",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P23",
+          "category": "parsing_bounds",
+          "target_function": "extract_window",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P24",
+          "category": "parsing_bounds",
+          "target_function": "binary_search_index",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P25",
+          "category": "parsing_bounds",
+          "target_function": "is_before_deadline",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P26",
+          "category": "security_integrity",
+          "target_function": "verify_manifest",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P27",
+          "category": "security_integrity",
+          "target_function": "verify_signature",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P28",
+          "category": "security_integrity",
+          "target_function": "validate_record",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P29",
+          "category": "security_integrity",
+          "target_function": "allow_request",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P30",
+          "category": "security_integrity",
+          "target_function": "redact_secrets",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      ]
+    },
+    "sonnet-L2": {
+      "n_pairs": 30,
+      "missing_mods": 0,
+      "parse_failures": 34,
+      "strict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_tpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "fpr": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "strict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "verdict_paired_separation": {
+        "k": 0,
+        "n": 30,
+        "rate": 0.0,
+        "wilson_95": [
+          0.0,
+          0.1135
+        ],
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "balanced_accuracy": 0.5,
+      "per_category": {
+        "guard_access": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "stats_eval": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "numeric_math": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "state_cache": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "parsing_bounds": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        "security_integrity": {
+          "n": 5,
+          "strict_tp": 0,
+          "verdict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      },
+      "pair_details": [
+        {
+          "pair_id": "P01",
+          "category": "guard_access",
+          "target_function": "is_inside_workspace",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P02",
+          "category": "guard_access",
+          "target_function": "is_readonly_git_command",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P03",
+          "category": "guard_access",
+          "target_function": "evaluate_access",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P04",
+          "category": "guard_access",
+          "target_function": "is_protected_target",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P05",
+          "category": "guard_access",
+          "target_function": "authorize_scopes",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P06",
+          "category": "stats_eval",
+          "target_function": "standardize_split",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P07",
+          "category": "stats_eval",
+          "target_function": "catch_rate_at_fpr",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P08",
+          "category": "stats_eval",
+          "target_function": "cluster_bootstrap_ci",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P09",
+          "category": "stats_eval",
+          "target_function": "weighted_mean",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P10",
+          "category": "stats_eval",
+          "target_function": "overall_accuracy",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P11",
+          "category": "numeric_math",
+          "target_function": "verify_max_cosine",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P12",
+          "category": "numeric_math",
+          "target_function": "mul_interval",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P13",
+          "category": "numeric_math",
+          "target_function": "project_tangent",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P14",
+          "category": "numeric_math",
+          "target_function": "logsumexp",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P15",
+          "category": "numeric_math",
+          "target_function": "matmul",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P16",
+          "category": "state_cache",
+          "target_function": "append_audit_event",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P17",
+          "category": "state_cache",
+          "target_function": "get_score",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P18",
+          "category": "state_cache",
+          "target_function": "with_extra_denies",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P19",
+          "category": "state_cache",
+          "target_function": "put",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P20",
+          "category": "state_cache",
+          "target_function": "save_checkpoint",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P21",
+          "category": "parsing_bounds",
+          "target_function": "parse_csv_rows",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P22",
+          "category": "parsing_bounds",
+          "target_function": "load_jsonl",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "PARSE_FAIL",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P23",
+          "category": "parsing_bounds",
+          "target_function": "extract_window",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P24",
+          "category": "parsing_bounds",
+          "target_function": "binary_search_index",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P25",
+          "category": "parsing_bounds",
+          "target_function": "is_before_deadline",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P26",
+          "category": "security_integrity",
+          "target_function": "verify_manifest",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P27",
+          "category": "security_integrity",
+          "target_function": "verify_signature",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P28",
+          "category": "security_integrity",
+          "target_function": "validate_record",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P29",
+          "category": "security_integrity",
+          "target_function": "allow_request",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        },
+        {
+          "pair_id": "P30",
+          "category": "security_integrity",
+          "target_function": "redact_secrets",
+          "buggy_verdict": "PARSE_FAIL",
+          "buggy_fn": null,
+          "clean_verdict": "CLEAN",
+          "strict_tp": 0,
+          "fp": 0,
+          "strict_sep": 0
+        }
+      ]
+    }
+  },
+  "comparisons": {
+    "haiku-L0_vs_haiku-L1": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": 0.3667,
+        "bootstrap_95": [
+          0.2,
+          0.5333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      }
+    },
+    "haiku-L0_vs_haiku-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": 0.3667,
+        "bootstrap_95": [
+          0.2,
+          0.5333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      }
+    },
+    "haiku-L0_vs_sonnet-L0": {
+      "strict_tp": {
+        "diff_a_minus_b": -0.0667,
+        "bootstrap_95": [
+          -0.1667,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": -0.0667,
+        "bootstrap_95": [
+          -0.1667,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.2333,
+        "bootstrap_95": [
+          0.0333,
+          0.4333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": -0.3,
+        "bootstrap_95": [
+          -0.5,
+          -0.1
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": -0.3,
+        "bootstrap_95": [
+          -0.5,
+          -0.1
+        ],
+        "established": true
+      }
+    },
+    "haiku-L0_vs_sonnet-L1": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": 0.3667,
+        "bootstrap_95": [
+          0.2,
+          0.5333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      }
+    },
+    "haiku-L0_vs_sonnet-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.9333,
+        "bootstrap_95": [
+          0.8333,
+          1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": 0.3667,
+        "bootstrap_95": [
+          0.2,
+          0.5333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.5667,
+        "bootstrap_95": [
+          0.4,
+          0.7333
+        ],
+        "established": true
+      }
+    },
+    "haiku-L1_vs_haiku-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      }
+    },
+    "haiku-L1_vs_sonnet-L0": {
+      "strict_tp": {
+        "diff_a_minus_b": -1.0,
+        "bootstrap_95": [
+          -1.0,
+          -1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": -1.0,
+        "bootstrap_95": [
+          -1.0,
+          -1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": -0.1333,
+        "bootstrap_95": [
+          -0.2667,
+          -0.0333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": -0.8667,
+        "bootstrap_95": [
+          -0.9667,
+          -0.7333
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": -0.8667,
+        "bootstrap_95": [
+          -0.9667,
+          -0.7333
+        ],
+        "established": true
+      }
+    },
+    "haiku-L1_vs_sonnet-L1": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      }
+    },
+    "haiku-L1_vs_sonnet-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      }
+    },
+    "haiku-L2_vs_sonnet-L0": {
+      "strict_tp": {
+        "diff_a_minus_b": -1.0,
+        "bootstrap_95": [
+          -1.0,
+          -1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": -1.0,
+        "bootstrap_95": [
+          -1.0,
+          -1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": -0.1333,
+        "bootstrap_95": [
+          -0.2667,
+          -0.0333
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": -0.8667,
+        "bootstrap_95": [
+          -0.9667,
+          -0.7333
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": -0.8667,
+        "bootstrap_95": [
+          -0.9667,
+          -0.7333
+        ],
+        "established": true
+      }
+    },
+    "haiku-L2_vs_sonnet-L1": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      }
+    },
+    "haiku-L2_vs_sonnet-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      }
+    },
+    "sonnet-L0_vs_sonnet-L1": {
+      "strict_tp": {
+        "diff_a_minus_b": 1.0,
+        "bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 1.0,
+        "bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": 0.1333,
+        "bootstrap_95": [
+          0.0333,
+          0.2667
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.8667,
+        "bootstrap_95": [
+          0.7333,
+          0.9667
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.8667,
+        "bootstrap_95": [
+          0.7333,
+          0.9667
+        ],
+        "established": true
+      }
+    },
+    "sonnet-L0_vs_sonnet-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 1.0,
+        "bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "established": true
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 1.0,
+        "bootstrap_95": [
+          1.0,
+          1.0
+        ],
+        "established": true
+      },
+      "fp": {
+        "diff_a_minus_b": 0.1333,
+        "bootstrap_95": [
+          0.0333,
+          0.2667
+        ],
+        "established": true
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.8667,
+        "bootstrap_95": [
+          0.7333,
+          0.9667
+        ],
+        "established": true
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.8667,
+        "bootstrap_95": [
+          0.7333,
+          0.9667
+        ],
+        "established": true
+      }
+    },
+    "sonnet-L1_vs_sonnet-L2": {
+      "strict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_tp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "fp": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "strict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      },
+      "verdict_sep": {
+        "diff_a_minus_b": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ],
+        "established": false
+      }
+    }
+  }
+}

@@ -1,0 +1,545 @@
+{
+  "seed": 20261122,
+  "entries": [
+    {
+      "mod_id": "mod_01",
+      "pair_id": "P05",
+      "category": "guard_access",
+      "title": "Token scope intersection for delegated actions",
+      "label": "BUG",
+      "target_function": "authorize_scopes",
+      "sha256": "6d49b300ce150490366aeb7a41c5363c55085dad1481ac180d1c131208d55050"
+    },
+    {
+      "mod_id": "mod_02",
+      "pair_id": "P30",
+      "category": "security_integrity",
+      "title": "Secret redactor covering all occurrences",
+      "label": "BUG",
+      "target_function": "redact_secrets",
+      "sha256": "85a33fdb1e5fdaa14c0f9b721cde5c5efb49c0cfb86703c5bb646aefb8dd2d2c"
+    },
+    {
+      "mod_id": "mod_03",
+      "pair_id": "P15",
+      "category": "numeric_math",
+      "title": "Matrix multiplication dimension order",
+      "label": "BUG",
+      "target_function": "matmul",
+      "sha256": "e7b8e4ce2d3bc71afec28c8d270ffc202456a646c9045c7a3a82ad59d51c6db5"
+    },
+    {
+      "mod_id": "mod_04",
+      "pair_id": "P26",
+      "category": "security_integrity",
+      "title": "SHA-256 manifest verification skipping extra untracked files",
+      "label": "BUG",
+      "target_function": "verify_manifest",
+      "sha256": "8f5dac410127887f819784dac1f924eca468ccff58f85b6893662804ee603818"
+    },
+    {
+      "mod_id": "mod_05",
+      "pair_id": "P14",
+      "category": "numeric_math",
+      "title": "Log-sum-exp numerical stability",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "6425d8d112b063dc27bebc0c85f9f5fb0444beff7850c9f6cc88d1e6fc3e5693"
+    },
+    {
+      "mod_id": "mod_06",
+      "pair_id": "P22",
+      "category": "parsing_bounds",
+      "title": "UTF-8 BOM handling in JSONL reader",
+      "label": "BUG",
+      "target_function": "load_jsonl",
+      "sha256": "9dabadbc7c005b7c7820ce088da10e7882549fc23ca8d6997b48fe377edd1638"
+    },
+    {
+      "mod_id": "mod_07",
+      "pair_id": "P15",
+      "category": "numeric_math",
+      "title": "Matrix multiplication dimension order",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "a3cf8d84cec500612d51056539408418d9a4e7a7d20c6e759ec668d846cdbc2a"
+    },
+    {
+      "mod_id": "mod_08",
+      "pair_id": "P27",
+      "category": "security_integrity",
+      "title": "HMAC digest verification length truncation",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "c4b599ebf5547435e07cf425dcb0f00643df6f9a0834fe79ac74f7d9a79cf7ea"
+    },
+    {
+      "mod_id": "mod_09",
+      "pair_id": "P23",
+      "category": "parsing_bounds",
+      "title": "Sliding context window upper boundary",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "235c55a7f526f5866f8eece3cb5d5cb1b99952859011c5abde77cf2ebcad796e"
+    },
+    {
+      "mod_id": "mod_10",
+      "pair_id": "P03",
+      "category": "guard_access",
+      "title": "Fail-closed JSON policy loader",
+      "label": "BUG",
+      "target_function": "evaluate_access",
+      "sha256": "842375921706a9ea1d28841bb6d53889ef42c883fa6a17fee7f41faa237ef9f1"
+    },
+    {
+      "mod_id": "mod_11",
+      "pair_id": "P18",
+      "category": "state_cache",
+      "title": "Shallow copy aliasing nested policy dictionary",
+      "label": "BUG",
+      "target_function": "with_extra_denies",
+      "sha256": "02b8c5d9a43dbfce1498e587f0b67aa1b4048089118bb3639e6824455080f347"
+    },
+    {
+      "mod_id": "mod_12",
+      "pair_id": "P25",
+      "category": "parsing_bounds",
+      "title": "ISO-8601 timezone-aware deadline comparison",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "7a1711770d0465a86f00965f2ae1ca63c121651d6747846abd96bbccece80563"
+    },
+    {
+      "mod_id": "mod_13",
+      "pair_id": "P01",
+      "category": "guard_access",
+      "title": "Workspace directory prefix check",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "10a8cd31bff1b923b2fddd872919553d76b914e2c36a191b52e7c665c4449585"
+    },
+    {
+      "mod_id": "mod_14",
+      "pair_id": "P24",
+      "category": "parsing_bounds",
+      "title": "Binary search inclusive upper bound",
+      "label": "BUG",
+      "target_function": "binary_search_index",
+      "sha256": "1efb99c5b5b97b1859c73e3daecef4884c54c86c089f31bd15d368f80c4c86fd"
+    },
+    {
+      "mod_id": "mod_15",
+      "pair_id": "P03",
+      "category": "guard_access",
+      "title": "Fail-closed JSON policy loader",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "c0754e287be5cf895dce00b1bc0e39992e5835f48057356aa6960cdb8475bdfe"
+    },
+    {
+      "mod_id": "mod_16",
+      "pair_id": "P07",
+      "category": "stats_eval",
+      "title": "FPR threshold boundary inequality",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "97386b467ca7c819046bb896a93915c813928818545906e969a258738b65551e"
+    },
+    {
+      "mod_id": "mod_17",
+      "pair_id": "P04",
+      "category": "guard_access",
+      "title": "Case-insensitive Windows path deny rule",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "ebef111cba1a4c43bf6b0650236b74f97d86aa190172b69cf13ae03297b89727"
+    },
+    {
+      "mod_id": "mod_18",
+      "pair_id": "P29",
+      "category": "security_integrity",
+      "title": "Sliding-window rate limiter boundary",
+      "label": "BUG",
+      "target_function": "allow_request",
+      "sha256": "c868842172409898027e7dfbcda33836ad3eab2d8819f3ef4a16af30e57e848f"
+    },
+    {
+      "mod_id": "mod_19",
+      "pair_id": "P21",
+      "category": "parsing_bounds",
+      "title": "Quoted comma in CSV row parser",
+      "label": "BUG",
+      "target_function": "parse_csv_rows",
+      "sha256": "e660e91bfdd0214e438d1ad348bdbefd9a2147c8cbe518ec428804533d3e0ff3"
+    },
+    {
+      "mod_id": "mod_20",
+      "pair_id": "P18",
+      "category": "state_cache",
+      "title": "Shallow copy aliasing nested policy dictionary",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "996a12150aa4a50533969caca020ea51c60827899620f8d40e26e24907ed9128"
+    },
+    {
+      "mod_id": "mod_21",
+      "pair_id": "P30",
+      "category": "security_integrity",
+      "title": "Secret redactor covering all occurrences",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "78152c8595d83837f34f71a6c71035259d572a0547c461a45e0452ccb01d1730"
+    },
+    {
+      "mod_id": "mod_22",
+      "pair_id": "P09",
+      "category": "stats_eval",
+      "title": "Weighted average normalization",
+      "label": "BUG",
+      "target_function": "weighted_mean",
+      "sha256": "c05cda89c7c8b7a0656c3436f89faf8f7c4b00cbd853635438ae65ec1947600d"
+    },
+    {
+      "mod_id": "mod_23",
+      "pair_id": "P11",
+      "category": "numeric_math",
+      "title": "Exact rational cosine bound check",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "679b1e50b587f40df4b8228074f64ec39f7b85f3cf97b2ae89b7b3343162c7d9"
+    },
+    {
+      "mod_id": "mod_24",
+      "pair_id": "P04",
+      "category": "guard_access",
+      "title": "Case-insensitive Windows path deny rule",
+      "label": "BUG",
+      "target_function": "is_protected_target",
+      "sha256": "823699a5e2b442562e47328b5e207b3ee47617a597b6d267d9fcc815b71f43a4"
+    },
+    {
+      "mod_id": "mod_25",
+      "pair_id": "P24",
+      "category": "parsing_bounds",
+      "title": "Binary search inclusive upper bound",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "39f3ba40f47adec08c4b50a22e9624cffd0cb2f86a3a480e1c6254fb901c2df9"
+    },
+    {
+      "mod_id": "mod_26",
+      "pair_id": "P07",
+      "category": "stats_eval",
+      "title": "FPR threshold boundary inequality",
+      "label": "BUG",
+      "target_function": "catch_rate_at_fpr",
+      "sha256": "c30cdf9a447a08be02aabd9f033416c974dcc3d12885f898c806529fe43efc74"
+    },
+    {
+      "mod_id": "mod_27",
+      "pair_id": "P12",
+      "category": "numeric_math",
+      "title": "Outward-rounded interval multiplication",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "55636550ef80a868ed3a6a9f8f5e6d240a63c97e1020a917698f3777e880c324"
+    },
+    {
+      "mod_id": "mod_28",
+      "pair_id": "P28",
+      "category": "security_integrity",
+      "title": "Strict schema check rejecting unexpected keys",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "4ac37f0f2a03f5841ce356112e3805f38e03d0541ce69a7c0d4d0b4c7a60f3d2"
+    },
+    {
+      "mod_id": "mod_29",
+      "pair_id": "P06",
+      "category": "stats_eval",
+      "title": "Train/test standardization leakage",
+      "label": "BUG",
+      "target_function": "standardize_split",
+      "sha256": "820219fcd0ead8ce08403cdd2941c967cc2fbee5e505cc38385892d2782f3928"
+    },
+    {
+      "mod_id": "mod_30",
+      "pair_id": "P19",
+      "category": "state_cache",
+      "title": "LRU cache eviction order",
+      "label": "BUG",
+      "target_function": "put",
+      "sha256": "3cb7fc3539011740c84109bc84f04bd59f380cc6b8d84226f9cae95991ce7a75"
+    },
+    {
+      "mod_id": "mod_31",
+      "pair_id": "P25",
+      "category": "parsing_bounds",
+      "title": "ISO-8601 timezone-aware deadline comparison",
+      "label": "BUG",
+      "target_function": "is_before_deadline",
+      "sha256": "7abbeae5b6b60e3d220137a1a81d987073386ea3e65278c327bdd32d1c8b2441"
+    },
+    {
+      "mod_id": "mod_32",
+      "pair_id": "P27",
+      "category": "security_integrity",
+      "title": "HMAC digest verification length truncation",
+      "label": "BUG",
+      "target_function": "verify_signature",
+      "sha256": "ff66aeff3dfcb56200f634036f722df9784502ab8678b75964389e26cb0d4dc5"
+    },
+    {
+      "mod_id": "mod_33",
+      "pair_id": "P05",
+      "category": "guard_access",
+      "title": "Token scope intersection for delegated actions",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "e0c4a995e61f9ef87dd76cc65184b8708459f600842e444ca9bb0a6464c2157a"
+    },
+    {
+      "mod_id": "mod_34",
+      "pair_id": "P11",
+      "category": "numeric_math",
+      "title": "Exact rational cosine bound check",
+      "label": "BUG",
+      "target_function": "verify_max_cosine",
+      "sha256": "05805094969ba68341c4dcd0e7ec73b24c1cb197d81c9220711e16730559e8bc"
+    },
+    {
+      "mod_id": "mod_35",
+      "pair_id": "P10",
+      "category": "stats_eval",
+      "title": "Missing-value denominator in accuracy",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "931b2eecce62318ee1d60d37825daec60e27391e28a3d3fc5cab324ca5ebb7e0"
+    },
+    {
+      "mod_id": "mod_36",
+      "pair_id": "P16",
+      "category": "state_cache",
+      "title": "Mutable default list leaking audit entries",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "d0b59388d2b951fbec3caf46a9fd0b5483324da6c6227410750a411876c403c7"
+    },
+    {
+      "mod_id": "mod_37",
+      "pair_id": "P20",
+      "category": "state_cache",
+      "title": "Checkpoint rollback on serialization error",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "590cdc6f36b08ce52161aed8cc49c9d7838241331bd518d12b7a38c08eebc94a"
+    },
+    {
+      "mod_id": "mod_38",
+      "pair_id": "P09",
+      "category": "stats_eval",
+      "title": "Weighted average normalization",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "af289f9ff262fe146f005ac5b59e386467f29c19cc57649f0a4691add3a0d6dc"
+    },
+    {
+      "mod_id": "mod_39",
+      "pair_id": "P17",
+      "category": "state_cache",
+      "title": "Memoization key omitting configuration parameter",
+      "label": "BUG",
+      "target_function": "get_score",
+      "sha256": "bd6b17ab60a0d8aa89ce048d8bd1cd89c93f27fe3a8d0e566370dc94e6e27dba"
+    },
+    {
+      "mod_id": "mod_40",
+      "pair_id": "P13",
+      "category": "numeric_math",
+      "title": "Tangent-space gradient projection on unit sphere",
+      "label": "BUG",
+      "target_function": "project_tangent",
+      "sha256": "15edd98773ebd8cb64ef9bc4ca08efc13e04ae38625d8ed85e58cc9928bc3992"
+    },
+    {
+      "mod_id": "mod_41",
+      "pair_id": "P10",
+      "category": "stats_eval",
+      "title": "Missing-value denominator in accuracy",
+      "label": "BUG",
+      "target_function": "overall_accuracy",
+      "sha256": "db290a85bd00327c1249db4b44a6c0057c0d035a4d5de27a369f5debbf97aec6"
+    },
+    {
+      "mod_id": "mod_42",
+      "pair_id": "P12",
+      "category": "numeric_math",
+      "title": "Outward-rounded interval multiplication",
+      "label": "BUG",
+      "target_function": "mul_interval",
+      "sha256": "221b5b58809124eb16afe56901dcbfc3580625d176fd51ec3b471f3cdcc6f242"
+    },
+    {
+      "mod_id": "mod_43",
+      "pair_id": "P26",
+      "category": "security_integrity",
+      "title": "SHA-256 manifest verification skipping extra untracked files",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "b97f8e4ad7c331690f08bee949b48af6acada7c1f7965a1ee3c3828d6e509737"
+    },
+    {
+      "mod_id": "mod_44",
+      "pair_id": "P08",
+      "category": "stats_eval",
+      "title": "Cluster bootstrap resampling unit",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "ff2fe19b51c9412977b5160022fb5a63d39bd7bd7e828c2ec6431f7855e1da69"
+    },
+    {
+      "mod_id": "mod_45",
+      "pair_id": "P23",
+      "category": "parsing_bounds",
+      "title": "Sliding context window upper boundary",
+      "label": "BUG",
+      "target_function": "extract_window",
+      "sha256": "d1fec87f11ef77d732752bf61aa35acf2847cb24f68b2d48ffdc4e386df54cba"
+    },
+    {
+      "mod_id": "mod_46",
+      "pair_id": "P16",
+      "category": "state_cache",
+      "title": "Mutable default list leaking audit entries",
+      "label": "BUG",
+      "target_function": "append_audit_event",
+      "sha256": "4d73dc485cd4b22b41cc2b99d4360144e6b2fbf79fbd98fa99ce641ed93267ae"
+    },
+    {
+      "mod_id": "mod_47",
+      "pair_id": "P14",
+      "category": "numeric_math",
+      "title": "Log-sum-exp numerical stability",
+      "label": "BUG",
+      "target_function": "logsumexp",
+      "sha256": "2a572469c226f29b32a048da874c9207a3f9efa2bac7e25ee009e749aa508e06"
+    },
+    {
+      "mod_id": "mod_48",
+      "pair_id": "P06",
+      "category": "stats_eval",
+      "title": "Train/test standardization leakage",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "147481e64edcd597020450c978965f32a91a39a94f90e31aaffadc34d191cfc5"
+    },
+    {
+      "mod_id": "mod_49",
+      "pair_id": "P01",
+      "category": "guard_access",
+      "title": "Workspace directory prefix check",
+      "label": "BUG",
+      "target_function": "is_inside_workspace",
+      "sha256": "1a0b82bfd955f7f4fdd64a493d86be645a9dc9a7ee7c99befe92a45955594176"
+    },
+    {
+      "mod_id": "mod_50",
+      "pair_id": "P28",
+      "category": "security_integrity",
+      "title": "Strict schema check rejecting unexpected keys",
+      "label": "BUG",
+      "target_function": "validate_record",
+      "sha256": "af27cfaa2dacfc7ab910a2c903bb14d6858ee7afd8188854edecb858fe03fbe0"
+    },
+    {
+      "mod_id": "mod_51",
+      "pair_id": "P29",
+      "category": "security_integrity",
+      "title": "Sliding-window rate limiter boundary",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "5d010be291be50083b5f8a8d3e3ba5e1e67b150fee2c0d273e378bf131411a5d"
+    },
+    {
+      "mod_id": "mod_52",
+      "pair_id": "P02",
+      "category": "guard_access",
+      "title": "Command allowlist regex anchoring",
+      "label": "BUG",
+      "target_function": "is_readonly_git_command",
+      "sha256": "e8261f0e2fbb7d018db63bc73f7094cdb21453ea6eef5466a4206639837c8c95"
+    },
+    {
+      "mod_id": "mod_53",
+      "pair_id": "P02",
+      "category": "guard_access",
+      "title": "Command allowlist regex anchoring",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "805454fc02ea935ea942a7b119fda8bf21ec387e616039bfcfc6d91ea83b3a32"
+    },
+    {
+      "mod_id": "mod_54",
+      "pair_id": "P20",
+      "category": "state_cache",
+      "title": "Checkpoint rollback on serialization error",
+      "label": "BUG",
+      "target_function": "save_checkpoint",
+      "sha256": "2fe885151ac63a06666cf461c6d6afcaf0f3898864a09db0b4b47201d91b367e"
+    },
+    {
+      "mod_id": "mod_55",
+      "pair_id": "P22",
+      "category": "parsing_bounds",
+      "title": "UTF-8 BOM handling in JSONL reader",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "fde08922980627cda6c7bfae69e1e773f7e66590e0787a4e7d93432c953f59fb"
+    },
+    {
+      "mod_id": "mod_56",
+      "pair_id": "P13",
+      "category": "numeric_math",
+      "title": "Tangent-space gradient projection on unit sphere",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "cfe848dabb56bb9b6ec8242c9a7678f80cd5a8c588a34b69a6758ee16c2fdd94"
+    },
+    {
+      "mod_id": "mod_57",
+      "pair_id": "P21",
+      "category": "parsing_bounds",
+      "title": "Quoted comma in CSV row parser",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "c5932ebd2dfd5f995de99218e204f4309b4477dcebdf128bb18b16bc7e03a449"
+    },
+    {
+      "mod_id": "mod_58",
+      "pair_id": "P08",
+      "category": "stats_eval",
+      "title": "Cluster bootstrap resampling unit",
+      "label": "BUG",
+      "target_function": "cluster_bootstrap_ci",
+      "sha256": "08d1799ea5e3001632619714075e53651627e9b3bd2aac1e8fbdd37f370fa9e0"
+    },
+    {
+      "mod_id": "mod_59",
+      "pair_id": "P17",
+      "category": "state_cache",
+      "title": "Memoization key omitting configuration parameter",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "c1ed0f15386c59dcb231d4ff3049efbc4a94fd761e92fcf8961c87ebdc57f0c2"
+    },
+    {
+      "mod_id": "mod_60",
+      "pair_id": "P19",
+      "category": "state_cache",
+      "title": "LRU cache eviction order",
+      "label": "CLEAN",
+      "target_function": null,
+      "sha256": "2524fbdb89a73e6538406e2da236d6897923b9cb9c8f36bfb43fdd4a6534ff93"
+    }
+  ]
+}

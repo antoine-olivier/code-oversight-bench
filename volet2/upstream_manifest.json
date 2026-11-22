@@ -1,0 +1,178 @@
+[
+  {
+    "name": "packaging",
+    "url": "https://github.com/pypa/packaging.git",
+    "commit": "3be01d3d5bb6fa5a9f6d7bd391e09ff2f3c4f95a",
+    "src_rel": "src",
+    "pkg_name": "packaging",
+    "test_rel": "tests"
+  },
+  {
+    "name": "itsdangerous",
+    "url": "https://github.com/pallets/itsdangerous.git",
+    "commit": "672971d66a2ef9f85151e53283113f33d642dabd",
+    "src_rel": "src",
+    "pkg_name": "itsdangerous",
+    "test_rel": "tests"
+  },
+  {
+    "name": "tomli",
+    "url": "https://github.com/hukkin/tomli.git",
+    "commit": "43a86ade8b795c6ef9b4ec53372a607cd1ed426f",
+    "src_rel": "src",
+    "pkg_name": "tomli",
+    "test_rel": "tests"
+  },
+  {
+    "name": "jmespath",
+    "url": "https://github.com/jmespath/jmespath.py.git",
+    "commit": "2812594e69d43098ef60f81f4efc404c071b0418",
+    "src_rel": ".",
+    "pkg_name": "jmespath",
+    "test_rel": "tests"
+  },
+  {
+    "name": "click",
+    "url": "https://github.com/pallets/click.git",
+    "commit": "08b803cf32ceb2ae6a772c62d5da42757a897d44",
+    "src_rel": "src",
+    "pkg_name": "click",
+    "test_rel": "tests"
+  },
+  {
+    "name": "markupsafe",
+    "url": "https://github.com/pallets/markupsafe.git",
+    "commit": "4e111271b1494995708a9e878a10829b5e10c7ba",
+    "src_rel": "src",
+    "pkg_name": "markupsafe",
+    "test_rel": "tests"
+  },
+  {
+    "name": "blinker",
+    "url": "https://github.com/pallets-eco/blinker.git",
+    "commit": "c3364059663df1ddce32799d6b1922af89a345f6",
+    "src_rel": "src",
+    "pkg_name": "blinker",
+    "test_rel": "tests"
+  },
+  {
+    "name": "werkzeug",
+    "url": "https://github.com/pallets/werkzeug.git",
+    "commit": "0f43c6ebd426039e4b99ec22535c2c8a2ec2f69f",
+    "src_rel": "src",
+    "pkg_name": "werkzeug",
+    "test_rel": "tests"
+  },
+  {
+    "name": "jinja",
+    "url": "https://github.com/pallets/jinja.git",
+    "commit": "5ef70112a1ff19c05324ff889dd30405b1002044",
+    "src_rel": "src",
+    "pkg_name": "jinja2",
+    "test_rel": "tests"
+  },
+  {
+    "name": "flask",
+    "url": "https://github.com/pallets/flask.git",
+    "commit": "49943b5a94413a530761350f04e896f76e8d620e",
+    "src_rel": "src",
+    "pkg_name": "flask",
+    "test_rel": "tests"
+  },
+  {
+    "name": "attrs",
+    "url": "https://github.com/python-attrs/attrs.git",
+    "commit": "f830e60f9c6485aa7037a52f03fdd28428dfbfc4",
+    "src_rel": "src",
+    "pkg_name": "attr",
+    "test_rel": "tests"
+  },
+  {
+    "name": "marshmallow",
+    "url": "https://github.com/marshmallow-code/marshmallow.git",
+    "commit": "f268f0c4d12c4edb43743ca5703eed7954320245",
+    "src_rel": "src",
+    "pkg_name": "marshmallow",
+    "test_rel": "tests"
+  },
+  {
+    "name": "boltons",
+    "url": "https://github.com/mahmoud/boltons.git",
+    "commit": "d31d821d56c8f7756af9c30a864077f2e5855321",
+    "src_rel": ".",
+    "pkg_name": "boltons",
+    "test_rel": "tests"
+  },
+  {
+    "name": "urllib3",
+    "url": "https://github.com/urllib3/urllib3.git",
+    "commit": "d9f9b0ad5b99247e06aa9a50b7a5747aa5c2e35d",
+    "src_rel": "src",
+    "pkg_name": "urllib3",
+    "test_rel": "test"
+  },
+  {
+    "name": "markdown",
+    "url": "https://github.com/Python-Markdown/markdown.git",
+    "commit": "5609061bd3359e882b745de184ebfe5ef1c08011",
+    "src_rel": ".",
+    "pkg_name": "markdown",
+    "test_rel": "tests"
+  },
+  {
+    "name": "lark",
+    "url": "https://github.com/lark-parser/lark.git",
+    "commit": "9a4fb9c7458e8155636773a3cded0016d52516da",
+    "src_rel": ".",
+    "pkg_name": "lark",
+    "test_rel": "tests"
+  },
+  {
+    "name": "rich",
+    "url": "https://github.com/Textualize/rich.git",
+    "commit": "3a109ccdffe5b2d0e30684a304fbd388e99ce57b",
+    "src_rel": ".",
+    "pkg_name": "rich",
+    "test_rel": "tests"
+  },
+  {
+    "name": "more_itertools",
+    "url": "https://github.com/more-itertools/more-itertools.git",
+    "commit": "e3f79f4fde5f7c107f70a20730b17240a05ba99b",
+    "src_rel": ".",
+    "pkg_name": "more_itertools",
+    "test_rel": "tests"
+  },
+  {
+    "name": "semver",
+    "url": "https://github.com/python-semver/python-semver.git",
+    "commit": "a4b7d337b1eb699ad4bad532a4b3fc68f8ec2408",
+    "src_rel": "src",
+    "pkg_name": "semver",
+    "test_rel": "tests"
+  },
+  {
+    "name": "humanize",
+    "url": "https://github.com/python-humanize/humanize.git",
+    "commit": "a95004512dde4e8f0269946bb4af754382347441",
+    "src_rel": "src",
+    "pkg_name": "humanize",
+    "test_rel": "tests"
+  },
+  {
+    "name": "dateutil",
+    "url": "https://github.com/dateutil/dateutil.git",
+    "commit": "261e2913961865300032cf30df1d59f4f0ff6f1a",
+    "src_rel": "src",
+    "pkg_name": "dateutil",
+    "test_rel": "tests"
+  },
+  {
+    "name": "pyyaml",
+    "url": "https://github.com/yaml/pyyaml.git",
+    "commit": "29d7735966c3dbb9043bb3975a372d12f3e2fe75",
+    "src_rel": "lib",
+    "pkg_name": "yaml",
+    "test_rel": "tests"
+  }
+]
